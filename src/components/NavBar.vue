@@ -1,9 +1,11 @@
 <template>
   <nav class="navbar">
     <div class="title">
-      <NavLink link="/" name="19 PDH Puszcza"></NavLink>
+      <img class="logo" src="../assets/krajka-logo.svg" />
+      <NavLink class="title-name" link="/" name="19 PDH Puszcza"></NavLink>
     </div>
     <div class="space"></div>
+    <button @click="toggleMenu" class="menu-toggler">Menu</button>
     <div class="links">
       <!-- Loop for generating links -->
       <NavLink v-for="route in routes" :key="route.path" :link="route.path" :name="route.name"></NavLink>
@@ -29,19 +31,29 @@ export default {
   data: function() {
     return {
       routes,
-      externalRoutes
+      externalRoutes,
+      menuCollapsed: true
     };
+  },
+  methods: {
+    toggleMenu() {
+      console.log("a");
+      this.menuCollapsed = !this.menuCollapsed;
+    }
   }
 };
 </script>
 
 <style scoped>
 .navbar {
+  box-sizing: border-box;
   width: 100vw;
   height: 80px;
 
   background: #ffffff;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+
+  padding: 0 200px 0 200px;
 
   display: flex;
   align-items: center;
@@ -53,12 +65,58 @@ export default {
 
 .title {
   font-size: 30px;
-  margin-left: 200px;
   flex-shrink: 0;
+
+  display: flex;
+}
+
+.title-name {
+  margin-left: 120px;
 }
 
 .links {
   display: flex;
-  margin-right: 200px;
+  flex-direction: row;
+}
+
+.logo {
+  position: absolute;
+  top: 0;
+}
+
+.menu-toggler {
+  display: none;
+}
+
+.show {
+  display: block !important;
+}
+
+@media (max-width: 1300px) {
+  .navbar {
+    padding: 0 50px 0 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .links {
+    background-color: #ffffff;
+
+    position: absolute;
+    /* width: 100vw; */
+
+    margin-top: 80px;
+
+    flex-direction: column;
+    display: none;
+  }
+
+  .menu-toggler {
+    display: block;
+  }
 }
 </style>

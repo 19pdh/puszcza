@@ -1,15 +1,20 @@
 <template>
   <div id="app">
-    <h1>19 PDH Puszcza</h1>
-    <img alt="Work in progress" src="./assets/wip.png" />
-    <h3>Strona w trakcie budowy</h3>
+    <nav>
+      <NavLink link="/" name="Home"></NavLink>
+      <NavLink link="/gallery" name="Galeria"></NavLink>
+      <NavLink link="/download" name="Do pobrania"></NavLink>
+    </nav>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+import NavLink from "./components/NavLink";
+
 export default {
   name: "app",
-  components: {}
+  components: { NavLink }
 };
 </script>
 

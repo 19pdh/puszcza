@@ -1,6 +1,7 @@
 <template>
-  <li>
-    <router-link v-bind:to="link">{{ name }}</router-link>
+  <li class="navlink">
+    <a v-if="external" class="link" :href="link">{{name}}</a>
+    <router-link v-else class="link" :to="link">{{ name }}</router-link>
   </li>
 </template>
 
@@ -8,7 +9,22 @@
 export default {
   props: {
     link: String,
-    name: String
+    name: String,
+    external: { type: Boolean, default: false }
   }
 };
 </script>
+
+<style scoped>
+.link {
+  text-decoration: none;
+  color: #181818;
+}
+
+.navlink {
+  list-style-type: none;
+
+  padding: 10px;
+  margin: 10px;
+}
+</style>

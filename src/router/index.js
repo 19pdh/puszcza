@@ -5,14 +5,21 @@ import GalleryView from "../views/GalleryView";
 import DownloadView from "../views/DownloadView";
 import PageNotFoundView from "../views/PageNotFoundView";
 
-const routes = [
-  { path: "/", component: HomeView },
-  { path: "/gallery", component: GalleryView },
-  { path: "/download", component: DownloadView },
-  { path: "*", component: PageNotFoundView }
+export const routes = [
+  { path: "/", name: "Home", component: HomeView },
+  { path: "/o-nas", name: "O nas" },
+  { path: "/download", name: "Do pobrania", component: DownloadView }
+];
+
+export const externalRoutes = [
+  {
+    path: "https://kronika-puszcza.netlify.com",
+    name: "Kronika"
+  },
+  { path: "https://kronika-puszcza.netlify.com/galeria", name: "Galeria" }
 ];
 
 export const router = new VueRouter({
   mode: "history",
-  routes
+  routes: [...routes, { path: "*", component: PageNotFoundView }]
 });

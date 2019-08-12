@@ -1,32 +1,36 @@
 <template>
   <div id="app">
-    <nav>
-      <NavLink link="/" name="Home"></NavLink>
-      <NavLink link="/gallery" name="Galeria"></NavLink>
-      <NavLink link="/download" name="Do pobrania"></NavLink>
-    </nav>
+    <NavBar />
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import NavLink from "./components/NavLink";
+import NavBar from "./components/NavBar.vue";
 
 export default {
   name: "app",
-  components: { NavLink }
+  components: { NavBar }
 };
 </script>
 
 <style>
 @import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
 
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
 #app {
   font-family: "Roboto Slab", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #181818;
-  margin-top: 60px;
+  text-align: center;
+
+  display: flex;
+  flex-direction: column;
 }
 </style>

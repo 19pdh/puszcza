@@ -1,16 +1,28 @@
 <template>
   <div id="app">
-    <NavBar />
+    <NavBar
+      :routes="routes"
+      :externalRoutes="externalRoutes"
+      title="19 PDH Puszcza"
+      logoPath="../assets/krajka-logo.svg"
+    />
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 import NavBar from "./components/NavBar.vue";
+import { routes, externalRoutes } from "./router/index";
 
 export default {
   name: "app",
-  components: { NavBar }
+  components: { NavBar },
+  data() {
+    return {
+      routes,
+      externalRoutes
+    };
+  }
 };
 </script>
 

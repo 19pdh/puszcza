@@ -13,6 +13,7 @@
     "vue-router": "^3.1.2"
   },
   "devDependencies": {
+    "bit-bin": "^14.2.3",
     "@vue/cli-plugin-babel": "^3.10.0",
     "@vue/cli-plugin-eslint": "^3.10.0",
     "@vue/cli-service": "^3.10.0",
@@ -43,5 +44,12 @@
   "browserslist": [
     "> 1%",
     "last 2 versions"
-  ]
+  ],
+  "bit": {
+    "env": {
+      "compiler": "bit.envs/bundlers/vue@2.5.1"
+    },
+    "componentsDefaultDirectory": "components/{name}",
+    "packageManager": "npm"
+  }
 }

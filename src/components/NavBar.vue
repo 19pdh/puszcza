@@ -1,8 +1,8 @@
 <template>
   <nav class="navbar">
     <div class="title">
-      <img class="logo" src="../assets/krajka-logo.svg" />
-      <NavLink class="title-name" link="/" name="19 PDH Puszcza"></NavLink>
+      <img class="logo" :src="logoPath" />
+      <router-link class="title-name" to="/">{{ title }}</router-link>
     </div>
     <div class="space"></div>
     <button @click="toggleMenu" class="menu-toggler">Menu</button>
@@ -22,16 +22,19 @@
 
 <script>
 import NavLink from "./NavLink.vue";
-import { routes, externalRoutes } from "../router/index";
 
 export default {
   components: {
     NavLink
   },
+  props: {
+    routes: Array,
+    externalRoutes: Array,
+    title: String,
+    logoPath: String
+  },
   data: function() {
     return {
-      routes,
-      externalRoutes,
       menuCollapsed: true
     };
   },
@@ -72,6 +75,9 @@ export default {
 
 .title-name {
   margin-left: 120px;
+  text-decoration: none;
+  color: #181818;
+  padding: 10px;
 }
 
 .links {

@@ -4,7 +4,7 @@
       :routes="routes"
       :externalRoutes="externalRoutes"
       title="19 PDH Puszcza"
-      logoPath="../assets/krajka-logo.svg"
+      logo="assets/krajka-logo.svg"
     />
     <router-view></router-view>
   </div>

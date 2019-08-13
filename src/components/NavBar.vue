@@ -1,7 +1,7 @@
 <template>
   <nav class="navbar">
     <div class="title">
-      <img class="logo" :src="logoPath" />
+      <img v-if="logo" class="logo" :src="logo" />
       <router-link class="title-name" to="/">{{ title }}</router-link>
     </div>
     <div class="space"></div>
@@ -31,7 +31,7 @@ export default {
     routes: Array,
     externalRoutes: Array,
     title: String,
-    logoPath: String
+    logo: String
   },
   data: function() {
     return {
@@ -49,6 +49,11 @@ export default {
 
 <style scoped>
 .navbar {
+  font-family: "Roboto Slab", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: #181818;
+
   box-sizing: border-box;
   width: 100vw;
   height: 80px;

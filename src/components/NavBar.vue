@@ -2,7 +2,7 @@
   <nav class="navbar">
     <div class="title">
       <img v-if="logo" class="logo" :src="logo" />
-      <router-link class="title-name" to="/">{{ title }}</router-link>
+      <router-link :class="titleClass" to="/">{{ title }}</router-link>
     </div>
     <div class="space"></div>
     <button @click="toggleMenu" class="menu-toggler">Menu</button>
@@ -32,6 +32,14 @@ export default {
     externalRoutes: Array,
     title: String,
     logo: String
+  },
+  computed: {
+    titleClass() {
+      if (this.logo) {
+        return "title-name margin";
+      }
+      return "title-name";
+    }
   },
   data: function() {
     return {
@@ -79,10 +87,13 @@ export default {
 }
 
 .title-name {
-  margin-left: 120px;
   text-decoration: none;
   color: #181818;
   padding: 10px;
+}
+
+.title-name.margin {
+  margin-left: 120px;
 }
 
 .links {

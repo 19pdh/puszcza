@@ -1,7 +1,7 @@
 <template>
   <li class="navlink">
-    <a v-if="external" :class="linkClass" target="_blank" :href="link">{{ name }}</a>
-    <router-link v-else :class="linkClass" :to="link">{{ name }}</router-link>
+    <a v-if="external" class="link" target="_blank" rel="”noopener”" :href="link">{{ name }}</a>
+    <router-link v-else class="link" :to="link">{{ name }}</router-link>
   </li>
 </template>
 
@@ -10,16 +10,7 @@ export default {
   props: {
     link: String,
     name: String,
-    external: { type: Boolean, default: false },
-    active: { type: Boolean, default: false }
-  },
-  computed: {
-    linkClass() {
-      if (this.active) {
-        return "link active";
-      }
-      return "link";
-    }
+    external: { type: Boolean, default: false }
   }
 };
 </script>
@@ -50,7 +41,7 @@ export default {
   margin: 10px;
 }
 
-.active {
+.router-link-exact-active {
   background-color: #ececec !important;
 }
 

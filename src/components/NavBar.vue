@@ -1,12 +1,12 @@
 <template>
   <nav :class="navbarClass">
     <div class="title">
-      <img v-if="logo" class="logo" :src="logo" />
+      <img v-if="logo" class="logo" :src="logo" alt="ZHR" />
       <router-link :class="titleClass" to="/">{{ title }}</router-link>
     </div>
     <div class="space"></div>
     <button @click="toggleMenu" class="menu-toggler">Menu</button>
-    <div :class="linksClass" @click="toggleMenu">
+    <ul :class="linksClass" @click="toggleMenu">
       <!-- Loop for generating links -->
       <NavLink v-for="route in routes" :key="route.path" :link="route.path" :name="route.name"></NavLink>
       <NavLink
@@ -16,7 +16,7 @@
         :name="route.name"
         :external="true"
       ></NavLink>
-    </div>
+    </ul>
   </nav>
 </template>
 
@@ -156,12 +156,14 @@ export default {
   }
 
   .links.show {
-    display: block !important;
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
     width: 100%;
     left: 0;
     top: 0;
-    padding-bottom: 20px;
 
     background: #fff;
   }
@@ -176,10 +178,6 @@ export default {
   .navbar {
     margin-bottom: 40px;
   }
-
-  .links {
-    margin-top: 120px;
-  }
 }
 
 @media (max-width: 500px) {
@@ -191,14 +189,16 @@ export default {
     width: 85px;
   }
 
-  .title-name,
-  .title-name.margin {
-    margin-left: 80px;
+  .title-name {
     font-size: 20px;
   }
 
+  .title-name.margin {
+    margin-left: 80px;
+  }
+
   .links.show {
-    height: 100%;
+    height: calc(100% - 80px);
   }
 }
 </style>

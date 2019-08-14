@@ -1,12 +1,12 @@
 <template>
-  <nav class="navbar">
+  <nav :class="navbarClass">
     <div class="title">
       <img v-if="logo" class="logo" :src="logo" />
       <router-link :class="titleClass" to="/">{{ title }}</router-link>
     </div>
     <div class="space"></div>
     <button @click="toggleMenu" class="menu-toggler">Menu</button>
-    <div class="links">
+    <div :class="linksClass" @click="toggleMenu">
       <!-- Loop for generating links -->
       <NavLink v-for="route in routes" :key="route.path" :link="route.path" :name="route.name"></NavLink>
       <NavLink
@@ -39,6 +39,18 @@ export default {
         return "title-name margin";
       }
       return "title-name";
+    },
+    navbarClass() {
+      if (this.menuCollapsed) {
+        return "navbar";
+      }
+      return "navbar menu-open";
+    },
+    linksClass() {
+      if (this.menuCollapsed) {
+        return "links";
+      }
+      return "links show";
     }
   },
   data: function() {
@@ -50,6 +62,9 @@ export default {
     toggleMenu() {
       console.log("a");
       this.menuCollapsed = !this.menuCollapsed;
+    },
+    linksClick() {
+      this.toggleMenu();
     }
   }
 };
@@ -104,14 +119,11 @@ export default {
 .logo {
   position: absolute;
   top: 0;
+  z-index: 1;
 }
 
 .menu-toggler {
   display: none;
-}
-
-.show {
-  display: block !important;
 }
 
 @media (max-width: 1300px) {
@@ -121,13 +133,15 @@ export default {
 }
 
 @media (max-width: 900px) {
+  .navbar.menu-open {
+    box-shadow: none;
+  }
+
   .title {
     font-size: 24px;
   }
 
   .links {
-    background-color: #ffffff;
-
     position: absolute;
     /* width: 100vw; */
 
@@ -139,6 +153,52 @@ export default {
 
   .menu-toggler {
     display: block;
+  }
+
+  .links.show {
+    display: block !important;
+
+    width: 100%;
+    left: 0;
+    top: 0;
+    padding-bottom: 20px;
+
+    background: #fff;
+  }
+
+  .links.show li {
+    padding: 2vh;
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    margin-bottom: 40px;
+  }
+
+  .links {
+    margin-top: 120px;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 0 10px 0 10px;
+  }
+
+  .logo {
+    width: 85px;
+  }
+
+  .title-name,
+  .title-name.margin {
+    margin-left: 80px;
+    font-size: 20px;
+  }
+
+  .links.show {
+    height: 100%;
   }
 }
 </style>

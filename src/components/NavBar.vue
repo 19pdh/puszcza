@@ -60,7 +60,6 @@ export default {
   },
   methods: {
     toggleMenu() {
-      console.log("a");
       this.menuCollapsed = !this.menuCollapsed;
     },
     linksClick() {
@@ -114,6 +113,7 @@ export default {
 .links {
   display: flex;
   flex-direction: row;
+  padding: 0;
 }
 
 .logo {

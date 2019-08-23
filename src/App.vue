@@ -1,11 +1,7 @@
 <template>
   <div id="app">
-    <NavBar
-      :routes="routes"
-      :externalRoutes="externalRoutes"
-      title="19 PDH Puszcza"
-      logo="assets/krajka-logo.svg"
-    />
+    <NavBar :routes="routes" :externalRoutes="externalRoutes" title="19 PDH Puszcza" />
+    <!-- logo="assets/krajka-logo.svg" -->
     <router-view></router-view>
   </div>
 </template>
@@ -20,7 +16,7 @@ export default {
   data() {
     return {
       routes,
-      externalRoutes
+      externalRoutes: []
     };
   }
 };

@@ -41,6 +41,7 @@ export default {
   background-color: #507b34;
   color: #ffffff;
   min-height: 175px;
+  width: 100vw;
 
   display: flex;
   flex-direction: row;

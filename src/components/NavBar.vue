@@ -163,6 +163,8 @@ export default {
     justify-content: center;
     align-items: center;
 
+    margin-bottom: 0;
+
     width: 100%;
     left: 0;
     top: 0;

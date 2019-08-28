@@ -87,10 +87,12 @@ export default {
 
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .space {
   flex: 1;
+  max-width: 500px;
 }
 
 .title {
@@ -107,7 +109,7 @@ export default {
 }
 
 .title-name.margin {
-  margin-left: 120px;
+  margin-left: 100px;
 }
 
 .links {
@@ -186,7 +188,7 @@ export default {
   }
 
   .logo {
-    width: 85px;
+    width: 65px;
   }
 
   .title-name {
@@ -194,7 +196,7 @@ export default {
   }
 
   .title-name.margin {
-    margin-left: 80px;
+    margin-left: 70px;
   }
 
   .links.show {

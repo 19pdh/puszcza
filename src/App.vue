@@ -1,22 +1,35 @@
 <template>
   <div id="app">
-    <NavBar :routes="routes" :externalRoutes="externalRoutes" title="19 PDH Puszcza" />
-    <!-- logo="assets/krajka-logo.svg" -->
-    <router-view></router-view>
+    <NavBar
+      :routes="routes"
+      :externalRoutes="externalRoutes"
+      title="19 PDH Puszcza"
+      logo="assets/krajka-logo.svg"
+    />
+    <router-view id="content"></router-view>
+    <Footer :routes="routes" :specialRoutes="specialRoutes" />
   </div>
 </template>
 
 <script>
 import NavBar from "./components/NavBar.vue";
+import Footer from "./components/Footer.vue";
+
 import { routes, externalRoutes } from "./router/index";
 
 export default {
   name: "app",
-  components: { NavBar },
+  components: { NavBar, Footer },
   data() {
     return {
       routes,
-      externalRoutes: []
+      externalRoutes: [],
+      specialRoutes: [
+        // {
+        //   name: 'Akcja "Ratujmy pszczoły"',
+        //   path: "/ratujmy-pszczoly"
+        // }
+      ]
     };
   }
 };
@@ -40,5 +53,10 @@ body {
 
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+#content {
+  flex: 1;
 }
 </style>

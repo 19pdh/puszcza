@@ -13,7 +13,17 @@
       </div>
     </div>
     <div class="space"></div>
-    <div>19 Poznańska Drużyna Harcerzy Puszcza</div>
+    <div class="author">
+      <p>19 Poznańska Drużyna Harcerzy Puszcza</p>
+      <div class="social">
+        <a href="https://github.com/19pdh/" target="_blank" rel="”noopener”">
+          <img class="icon" src="/assets/social/github.png" alt="Github" />
+        </a>
+        <a href="https://www.facebook.com/19pdhpuszcza/" target="_blank" rel="”noopener”">
+          <img class="icon" src="/assets/social/facebook.png" alt="Facebook" />
+        </a>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -30,7 +40,7 @@ export default {
 .footer {
   background-color: #507b34;
   color: #ffffff;
-  height: 175px;
+  min-height: 175px;
 
   display: flex;
   flex-direction: row;
@@ -38,7 +48,7 @@ export default {
   align-items: center;
   justify-content: center;
 
-  padding: 0 15vw 0 15vw;
+  padding: 0 15vw;
 }
 
 .map {
@@ -61,6 +71,13 @@ export default {
   flex-direction: column;
 }
 
+.icon {
+  width: 30px;
+  height: 30px;
+
+  margin: 0 5px;
+}
+
 .space {
   flex: 1;
   max-width: 500px;
@@ -76,6 +93,18 @@ export default {
 
   .map {
     text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .space {
+    height: 1px;
+    width: 100%;
+    flex: none;
+    background-color: #ffffff;
+  }
+
+  .author {
+    margin-top: 10px;
   }
 }
 </style>

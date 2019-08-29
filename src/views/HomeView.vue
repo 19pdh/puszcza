@@ -1,13 +1,16 @@
 <template>
   <div>
-    <h1>19 PDH Puszcza</h1>
-    <img alt="Work in progress" src="assets/wip.png" />
-    <h3>Strona w trakcie budowy</h3>
+    <JoinUs />
+    <FacebookFeed />
   </div>
 </template>
 
 <script>
+import JoinUs from "../components/JoinUs.vue";
+import FacebookFeed from "../components/FacebookFeed.vue";
+
 export default {
-  name: "HomeView"
+  name: "HomeView",
+  components: { JoinUs, FacebookFeed }
 };
 </script>

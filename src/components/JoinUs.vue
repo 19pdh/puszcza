@@ -1,28 +1,46 @@
 <template>
-  <div class="joinus">
-    <div class="title">
-      <h1 class="text">Rozpocznij swoją harcerską przygodę!</h1>
+  <section class="joinus">
+    <div class="heading">
+      <div class="title">
+        <h1 class="text">Rozpocznij swoją harcerską przygodę!</h1>
+      </div>
+      <div class="button">
+        <router-link to="/join-us">Dołącz do nas!</router-link>
+      </div>
     </div>
-    <div class="button">
-      <router-link to="/join-us">Dołącz do nas!</router-link>
-    </div>
-  </div>
+  </section>
 </template>
 
 <style scoped>
 .joinus {
+  width: 100%;
+
+  padding: 80px 20%;
+
+  background: #dddddd;
+}
+
+.heading {
+  max-width: 750px;
+  padding: 100px 0;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
   background-color: #340c0e;
   color: #ffffff;
 
-  max-width: 330px;
+  max-width: 260px;
+  height: 85px;
+  margin-bottom: 20px;
 
   text-align: left;
 }
 
 .title .text {
+  margin: 0;
   padding: 10px;
 }
 
@@ -35,5 +53,16 @@
 .button a {
   color: #ffffff;
   text-decoration: none;
+}
+
+@media (max-width: 500px) {
+  .heading {
+    margin: 0;
+    align-items: center;
+  }
+
+  .joinus {
+    padding: 80px 20px;
+  }
 }
 </style>

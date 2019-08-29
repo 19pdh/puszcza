@@ -2,7 +2,7 @@
   <section class="joinus">
     <div class="heading">
       <div class="title">
-        <h1 class="text">Rozpocznij swoją harcerską przygodę!</h1>
+        <div class="text">Rozpocznij swoją harcerską przygodę!</div>
       </div>
       <div class="button">
         <router-link to="/kontakt">Dołącz do nas!</router-link>
@@ -42,6 +42,7 @@
 .title .text {
   margin: 0;
   padding: 10px;
+  font-size: 24px;
 }
 
 .button {

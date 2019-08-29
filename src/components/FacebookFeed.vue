@@ -1,15 +1,41 @@
 <template>
-  <section>
+  <section class="feed">
     <h1>Ostatnie wpisy</h1>
+    <FacebookFindUsButton />
   </section>
 </template>
 
 <script>
+import FacebookFindUsButton from "./FacebookFindUsButton.vue";
+
 export default {
-  mounted() {
-    fetch(
-      `http://fetchrss.com/rss/5d6675308a93f8773c8b45685d66750d8a93f8bb388b4567.xml`
-    ).then(console.log);
+  components: {
+    FacebookFindUsButton
+  },
+  props: {
+    pageId: String
+  },
+  created() {
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId: "702203580219306",
+        autoLogAppEvents: true,
+        xfbml: true,
+        version: "v4.0"
+      });
+
+      FB.api(`/${this.pageId}/feed`, function(response) {
+        if (response && !response.error) {
+          console.log(response);
+        }
+      });
+    };
   }
 };
 </script>
+
+<style scoped>
+.feed {
+  margin: 50px 0;
+}
+</style>

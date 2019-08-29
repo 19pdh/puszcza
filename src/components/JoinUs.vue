@@ -5,7 +5,7 @@
         <h1 class="text">Rozpocznij swoją harcerską przygodę!</h1>
       </div>
       <div class="button">
-        <router-link to="/join-us">Dołącz do nas!</router-link>
+        <router-link to="/kontakt">Dołącz do nas!</router-link>
       </div>
     </div>
   </section>

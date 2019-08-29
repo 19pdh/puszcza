@@ -1,5 +1,5 @@
 <template>
-  <div class="footer">
+  <div class="footer" :style="style">
     <div class="map">
       <div class="routes">
         <router-link v-for="route in routes" :key="route.name" :to="route.path">{{route.name}}</router-link>
@@ -31,14 +31,22 @@
 export default {
   props: {
     routes: Array,
-    specialRoutes: Array
+    specialRoutes: Array,
+    color: {
+      type: String,
+      default: "#507b34"
+    }
+  },
+  computed: {
+    style() {
+      return `background-color: ${this.color}`;
+    }
   }
 };
 </script>
 
 <style scoped>
 .footer {
-  background-color: #507b34;
   color: #ffffff;
   min-height: 175px;
   width: 100vw;

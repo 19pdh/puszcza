@@ -77,7 +77,7 @@ export default {
   color: #181818;
 
   box-sizing: border-box;
-  width: 100vw;
+  width: 100%;
   height: 80px;
 
   background: #ffffff;

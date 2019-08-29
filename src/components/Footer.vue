@@ -49,7 +49,7 @@ export default {
 .footer {
   color: #ffffff;
   min-height: 175px;
-  width: 100vw;
+  width: 100%;
 
   display: flex;
   flex-direction: row;

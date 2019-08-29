@@ -32,7 +32,7 @@
   background-color: #340c0e;
   color: #ffffff;
 
-  max-width: 260px;
+  width: 260px;
   height: 85px;
   margin-bottom: 20px;
 

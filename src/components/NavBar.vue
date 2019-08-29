@@ -164,6 +164,7 @@ export default {
     align-items: center;
 
     margin-bottom: 0;
+    padding: 50px 0;
 
     width: 100%;
     left: 0;
@@ -175,12 +176,6 @@ export default {
   .links.show li {
     padding: 2vh;
     font-size: 30px;
-  }
-}
-
-@media (max-width: 720px) {
-  .navbar {
-    margin-bottom: 40px;
   }
 }
 

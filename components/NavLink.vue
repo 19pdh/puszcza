@@ -1,7 +1,7 @@
 <template>
   <li class="navlink">
     <a v-if="external" class="link" target="_blank" rel="”noopener”" :href="link">{{ name }}</a>
-    <router-link v-else class="link" :to="link">{{ name }}</router-link>
+    <nuxt-link v-else class="link" :to="link">{{ name }}</nuxt-link>
   </li>
 </template>
 
@@ -12,14 +12,14 @@ export default {
     name: String,
     external: { type: Boolean, default: false }
   }
-};
+}
 </script>
 
 <style scoped>
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 
 .link {
-  font-family: "Roboto Slab", serif;
+  font-family: 'Roboto Slab', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 

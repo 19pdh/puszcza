@@ -2,14 +2,10 @@
   <div class="footer" :style="style">
     <div class="map">
       <div class="routes">
-        <router-link v-for="route in routes" :key="route.name" :to="route.path">{{route.name}}</router-link>
+        <nuxt-link v-for="route in routes" :key="route.name" :to="route.path">{{route.name}}</nuxt-link>
       </div>
       <div class="routes">
-        <router-link
-          v-for="route in specialRoutes"
-          :key="route.name"
-          :to="route.path"
-        >{{route.name}}</router-link>
+        <nuxt-link v-for="route in specialRoutes" :key="route.name" :to="route.path">{{route.name}}</nuxt-link>
       </div>
     </div>
     <div class="space"></div>
@@ -34,15 +30,15 @@ export default {
     specialRoutes: Array,
     color: {
       type: String,
-      default: "#507b34"
+      default: '#507b34'
     }
   },
   computed: {
     style() {
-      return `background-color: ${this.color}`;
+      return `background-color: ${this.color}`
     }
   }
-};
+}
 </script>
 
 <style scoped>

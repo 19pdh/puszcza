@@ -18,10 +18,14 @@
   padding: 80px 20%;
 
   background: #dddddd;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .heading {
-  max-width: 750px;
+  width: 900px;
   padding: 100px 0;
 
   display: flex;

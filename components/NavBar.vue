@@ -2,7 +2,7 @@
   <nav :class="navbarClass">
     <div class="title">
       <img v-if="logo" class="logo" :src="logo" alt="ZHR" />
-      <router-link :class="titleClass" to="/">{{ title }}</router-link>
+      <nuxt-link :class="titleClass" to="/">{{ title }}</nuxt-link>
     </div>
     <div class="space"></div>
     <button @click="toggleMenu" class="menu-toggler">Menu</button>
@@ -21,7 +21,7 @@
 </template>
 
 <script>
-import NavLink from "./NavLink";
+import NavLink from './NavLink'
 
 export default {
   components: {
@@ -36,42 +36,42 @@ export default {
   computed: {
     titleClass() {
       if (this.logo) {
-        return "title-name margin";
+        return 'title-name margin'
       }
-      return "title-name";
+      return 'title-name'
     },
     navbarClass() {
       if (this.menuCollapsed) {
-        return "navbar";
+        return 'navbar'
       }
-      return "navbar menu-open";
+      return 'navbar menu-open'
     },
     linksClass() {
       if (this.menuCollapsed) {
-        return "links";
+        return 'links'
       }
-      return "links show";
+      return 'links show'
     }
   },
   data: function() {
     return {
       menuCollapsed: true
-    };
+    }
   },
   methods: {
     toggleMenu() {
-      this.menuCollapsed = !this.menuCollapsed;
+      this.menuCollapsed = !this.menuCollapsed
     },
     linksClick() {
-      this.toggleMenu();
+      this.toggleMenu()
     }
   }
-};
+}
 </script>
 
 <style scoped>
 .navbar {
-  font-family: "Roboto Slab", serif;
+  font-family: 'Roboto Slab', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #181818;

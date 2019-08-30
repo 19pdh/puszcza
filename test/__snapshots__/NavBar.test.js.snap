@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar match snapshot 1`] = `
+<nav
+  class="navbar"
+>
+  <div
+    class="title"
+  >
+    <!---->
+     
+    <nuxt-link
+      class="title-name"
+      to="/"
+    >
+      Title
+    </nuxt-link>
+  </div>
+   
+  <div
+    class="space"
+  />
+   
+  <button
+    class="menu-toggler"
+  >
+    Menu
+  </button>
+   
+  <ul
+    class="links"
+  >
+    <navlink-stub
+      link="/"
+      name="Home"
+    />
+     
+  </ul>
+</nav>
+`;

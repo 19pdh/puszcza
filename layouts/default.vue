@@ -6,37 +6,46 @@
       title="19 PDH Puszcza"
       logo="assets/krajka-logo.svg"
     />
-    <router-view id="content"></router-view>
+    <nuxt id="content" />
     <Footer :routes="routes" :specialRoutes="specialRoutes" />
   </div>
 </template>
 
 <script>
-import NavBar from "./components/NavBar.vue";
-import Footer from "./components/Footer.vue";
-
-import { routes, externalRoutes } from "./router/index";
+import NavBar from '../components/NavBar.vue'
+import Footer from '../components/Footer.vue'
 
 export default {
-  name: "app",
+  name: 'app',
   components: { NavBar, Footer },
   data() {
     return {
-      routes,
-      externalRoutes: [],
+      routes: [
+        { path: '/', name: 'Home' },
+        { path: '/o-nas', name: 'O nas' },
+        { path: '/download', name: 'Do pobrania' },
+        { path: '/kontakt', name: 'Kontakt' }
+      ],
+      externalRoutes: [
+        // {
+        //   path: 'https://kronika-puszcza.netlify.com',
+        //   name: 'Kronika'
+        // },
+        // { path: 'https://kronika-puszcza.netlify.com/galeria', name: 'Galeria' }
+      ],
       specialRoutes: [
         // {
         //   name: 'Akcja "Ratujmy pszczoły"',
         //   path: "/ratujmy-pszczoly"
         // }
       ]
-    };
+    }
   }
-};
+}
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
 
 html,
 body {
@@ -49,7 +58,7 @@ body {
 }
 
 #app {
-  font-family: "Roboto Slab", serif;
+  font-family: 'Roboto Slab', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #181818;

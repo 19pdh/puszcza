@@ -41,7 +41,7 @@ export default {
   margin: 10px;
 }
 
-.router-link-exact-active {
+.nuxt-link-exact-active {
   background-color: #ececec !important;
 }
 

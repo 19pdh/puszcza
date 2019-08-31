@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`JoinUs match snapshot 1`] = `
+<section
+  class="joinus"
+>
+  <div
+    class="heading"
+  >
+    <div
+      class="title"
+    >
+      <div
+        class="text"
+      >
+        Rozpocznij swoją harcerską przygodę!
+      </div>
+    </div>
+     
+    <div
+      class="button"
+    >
+      <router-link
+        to="/kontakt"
+      >
+        Dołącz do nas!
+      </router-link>
+    </div>
+  </div>
+</section>
+`;

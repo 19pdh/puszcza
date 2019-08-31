@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FacebookFeed match snapshot 1`] = `
+<section
+  class="feed"
+>
+  <h1>
+    Zobacz co się dzieje!
+  </h1>
+   
+  <facebookfindusbutton-stub />
+</section>
+`;

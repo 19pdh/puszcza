@@ -1,5 +1,5 @@
 import { shallowMount } from '@vue/test-utils'
-import NavBar from '../components/NavBar'
+import NavBar from '../../components/NavBar'
 
 describe('NavBar', () => {
   // Now mount the component and you have the wrapper

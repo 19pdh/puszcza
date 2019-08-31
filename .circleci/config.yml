@@ -22,7 +22,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: npm install && npm install -g coveralls
+      - run: npm install -D
 
       - save_cache:
           paths:
@@ -33,4 +33,4 @@ jobs:
       - run: npm test
 
       # upload coverage
-      - run: jest --coverage --coverageReporters=text-lcov | coveralls
+      - run: jest --coverage --coverageReporters=text-lcov | npx coveralls

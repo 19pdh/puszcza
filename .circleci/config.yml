@@ -33,4 +33,4 @@ jobs:
       - run: npm test
 
       # upload coverage
-      - run: jest --coverage --coverageReporters=text-lcov | npx coveralls
+      - run: npm test -- --coverage --coverageReporters=text-lcov | npx coveralls

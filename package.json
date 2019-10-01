@@ -1,55 +1,46 @@
 {
   "name": "puszcza",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "description": "Strona 19 PDH Puszcza",
+  "author": "Patryk Niedźwiedziński",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test": "jest"
   },
   "dependencies": {
-    "core-js": "^2.6.5",
-    "vue": "^2.6.10",
-    "vue-router": "^3.1.2"
+    "nuxt": "^2.0.0",
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/pwa": "^3.0.0-0"
   },
   "devDependencies": {
-    "bit-bin": "^14.2.3",
-    "@vue/cli-plugin-babel": "^3.10.0",
-    "@vue/cli-plugin-eslint": "^3.10.0",
-    "@vue/cli-service": "^3.10.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.16.0",
-    "eslint-plugin-vue": "^5.0.0",
-    "vue-template-compiler": "^2.6.10"
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-jest": "^24.1.0",
+    "coveralls": "^3.0.6",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "jest": "^24.1.0",
+    "jest-serializer-vue": "^2.0.2",
+    "prettier": "^1.16.4",
+    "vue-jest": "^4.0.0-0"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": [
-      "plugin:vue/essential",
-      "eslint:recommended"
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
     ],
-    "rules": {},
-    "parserOptions": {
-      "parser": "babel-eslint"
-    }
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ],
-  "bit": {
-    "env": {
-      "compiler": "bit.envs/bundlers/vue@2.5.1"
+    "transform": {
+      ".*\\.(vue)$": "vue-jest"
     },
-    "componentsDefaultDirectory": "components/{name}",
-    "packageManager": "npm"
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ]
   }
 }

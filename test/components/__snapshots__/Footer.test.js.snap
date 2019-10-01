@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer match snapshot 1`] = `
+<div
+  class="footer"
+  style="background-color: rgb(80, 123, 52);"
+>
+  <div
+    class="map"
+  >
+    <div
+      class="routes"
+    >
+      <nuxt-link
+        to="/"
+      >
+        Home
+      </nuxt-link>
+    </div>
+     
+    <div
+      class="routes"
+    />
+  </div>
+   
+  <div
+    class="space"
+  />
+   
+  <div
+    class="author"
+  >
+    <p>
+      19 Poznańska Drużyna Harcerzy Puszcza
+    </p>
+     
+    <div
+      class="social"
+    >
+      <a
+        href="https://github.com/19pdh/"
+        rel="”noopener”"
+        target="_blank"
+      >
+        <img
+          alt="Github"
+          class="icon"
+          src="/assets/social/github.png"
+        />
+      </a>
+       
+      <a
+        href="https://www.facebook.com/19pdhpuszcza/"
+        rel="”noopener”"
+        target="_blank"
+      >
+        <img
+          alt="Facebook"
+          class="icon"
+          src="/assets/social/facebook.png"
+        />
+      </a>
+    </div>
+  </div>
+</div>
+`;

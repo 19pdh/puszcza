@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`404 match snapshot 1`] = `
+<div>
+  <h1>
+    404
+  </h1>
+   
+  <p>
+    Nie znaleziono strony
+  </p>
+</div>
+`;

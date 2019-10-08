@@ -4,6 +4,9 @@ export default {
    ** Headers of the page
    */
   head: {
+    htmlAttrs: {
+      lang: 'pl'
+    },
     title: '19 PDH Puszcza',
     meta: [
       { charset: 'utf-8' },

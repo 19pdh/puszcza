@@ -31,7 +31,6 @@ function getPosts() {
     })
   }
   finally {
-    console.log(routesArray)
     return routesArray
   }
 }

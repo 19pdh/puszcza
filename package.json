@@ -6,8 +6,9 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "prebuild": "git clone https://github.com/19pdh/kronika && rm -rf kronika/.git",
+    "prebuild": "./scripts/prebuild.sh",
     "build": "nuxt generate",
+    "postbuild": "./scripts/postbuild.sh",
     "start": "nuxt start",
     "test": "jest"
   },

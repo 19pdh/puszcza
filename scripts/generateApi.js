@@ -13,5 +13,7 @@ posts = posts.map(({ year, month, day, title, attributes, route }) => {
     }
 })
 
+posts.sort((a, b) => (a.route > b.route ? 1 : -1))
+
 fs.writeFile('./dist/api/posts.json', JSON.stringify(posts), (err) => err ? console.log(err) : null)
 console.log(posts)

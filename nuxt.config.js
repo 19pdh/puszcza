@@ -1,3 +1,5 @@
+import { createRoutesArray } from './api/api.js'
+
 export default {
   mode: 'universal',
   /*
@@ -30,6 +32,9 @@ export default {
         rel: 'stylesheet'
       }
     ]
+  },
+  generate: {
+    routes: createRoutesArray
   },
   /*
    ** Customize the progress-bar color
@@ -67,6 +72,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, ctx) { }
   }
 }

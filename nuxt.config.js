@@ -34,7 +34,7 @@ export default {
     ]
   },
   generate: {
-    routes: createRoutesArray
+    routes: createRoutesArray()
   },
   /*
    ** Customize the progress-bar color

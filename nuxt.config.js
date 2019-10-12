@@ -78,5 +78,14 @@ export default {
         use: ['raw-loader']
       })
     }
+  },
+  hooks: {
+    generate: {
+      routeCreated({ route, path, errors }) {
+        console.log(route)
+        console.log(path)
+        console.log(errors)
+      }
+    }
   }
 }

@@ -1,13 +1,20 @@
 const fs = require('fs')
 const frontmatter = require('front-matter')
+const md = require('markdown-it')()
+const { JSDOM } = require('jsdom')
 
 const POSTS_PATH = './content/wpisy'
 
-function getPostAttributes(filePath) {
-  const fileContent = fs.readFileSync(filePath, 'utf-8')
-
+function getPostAttributes(fileContent) {
   const post = frontmatter(fileContent)
-  return post.attributes
+
+  const { document } = new JSDOM(`<body>${md.render(post.body)}</body>`).window
+  const element = document.getElementsByTagName('p')
+
+  post.body = `<div>${md.render(post.body)}</div>`
+  post.description = element[1].textContent
+
+  return post
 }
 
 function getPosts() {
@@ -25,14 +32,14 @@ function getPosts() {
             const route = `/kronika/${year}/${month}/${day}/${title}/`
             const fsRoute = `${POSTS_PATH}/${year}/${month}/${day}/${file}`
 
-            const attributes = getPostAttributes(fsRoute)
+            const data = getPostAttributes(fs.readFileSync(fsRoute, 'utf-8'))
 
             routesArray.push({
               year,
               month,
               day,
               title,
-              attributes,
+              data,
               file,
               fsRoute,
               route
@@ -53,5 +60,6 @@ function createRoutesArray() {
 
 module.exports = {
   getPosts,
-  createRoutesArray
+  createRoutesArray,
+  getPostAttributes
 }

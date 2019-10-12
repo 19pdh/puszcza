@@ -15,10 +15,10 @@
 <script>
 const md = require('markdown-it')()
 import frontmatter from 'front-matter'
+import { getPostAttributes } from '~/api/api'
 
 export default {
   async asyncData({ params }) {
-    console.log(params)
     const fileContent = await import(
       `~/content/wpisy/${params.year}/${params.month}/${
         params.day
@@ -27,12 +27,12 @@ export default {
 
     if (fileContent === undefined) return { notFound: true }
 
-    let post = frontmatter(fileContent.default)
-    console.log(post.attributes)
+    const post = getPostAttributes(fileContent.default)
+
     return {
       params,
       attributes: post.attributes,
-      content: md.render(post.body)
+      content: post.body
     }
   },
   data() {

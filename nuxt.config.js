@@ -14,7 +14,6 @@ export default {
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { name: 'robots', content: 'all' },
-      { name:"fb:pages", content="496021544115239"},
       {
         hid: 'description',
         name: 'description',
@@ -23,7 +22,8 @@ export default {
       {
         name: 'google-site-verification',
         content: 'V9-RG4-ertDzO9hqxuG29PkDUM8PGqaSOYUMiMaGUOY'
-      }
+      },
+      { name: 'fb:pages', content: '496021544115239' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

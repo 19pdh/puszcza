@@ -23,7 +23,7 @@ export default {
         name: 'google-site-verification',
         content: 'V9-RG4-ertDzO9hqxuG29PkDUM8PGqaSOYUMiMaGUOY'
       },
-      { name: 'fb:pages', content: '496021544115239' }
+      { property: 'fb:pages', content: '496021544115239' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

@@ -1,4 +1,4 @@
-import k from './api'
+import { createRoutesArray } from './api/api.js'
 
 export default {
   mode: 'universal',
@@ -34,7 +34,7 @@ export default {
     ]
   },
   generate: {
-    routes: k.getPosts().map(post => post.route)
+    routes: createRoutesArray()
   },
   /*
    ** Customize the progress-bar color

@@ -1,16 +1,14 @@
-import fs from 'fs'
-import k from '../api'
+const fs = require('fs')
 
-let posts = k.getPosts()
+let { getPosts } = require('../api/api')
 
-posts = posts.map(({ date, title, content, route }) => {
-  const { year, month, day } = date
-  const { description, meta } = content
+let posts = getPosts()
 
+posts = posts.map(({ year, month, day, title, data, route }) => {
   return {
     date: `${year}-${month}-${day}`,
     title,
-    content: { description, meta },
+    data,
     route
   }
 })

@@ -1,5 +1,7 @@
 import { createRoutesArray } from './api/api.js'
 
+const BASE_URL = 'https://kronika--puszcza.netlify.com'
+
 export default {
   mode: 'universal',
   /*
@@ -26,7 +28,7 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: '/assets/og/default.png'
+        content: `${BASE_URL}/assets/og/default.png`
       }
     ],
     link: [

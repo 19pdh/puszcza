@@ -22,6 +22,11 @@ export default {
       {
         name: 'google-site-verification',
         content: 'V9-RG4-ertDzO9hqxuG29PkDUM8PGqaSOYUMiMaGUOY'
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: '/assets/og/default.png'
       }
     ],
     link: [

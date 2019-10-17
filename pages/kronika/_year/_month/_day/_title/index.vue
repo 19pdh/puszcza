@@ -15,24 +15,19 @@
 <script>
 const md = require('markdown-it')()
 import frontmatter from 'front-matter'
-import { getPostAttributes } from '~/api/api'
+import k from '~/api'
 
 export default {
   async asyncData({ params }) {
-    const fileContent = await import(
-      `~/content/wpisy/${params.year}/${params.month}/${
-        params.day
-      }/${params.title.toLowerCase()}.md`
-    ).catch(e => console.log(e))
+    const { year, month, day, title } = params
+    const post = k.getPost(year, month, day, title)
 
-    if (fileContent === undefined) return { notFound: true }
-
-    const post = getPostAttributes(fileContent.default)
+    if (post === undefined) return { notFound: true }
 
     return {
       params,
-      attributes: post.attributes,
-      content: post.body
+      attributes: post.content.meta,
+      content: post.content.html
     }
   },
   data() {

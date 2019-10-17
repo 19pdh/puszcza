@@ -1,4 +1,4 @@
-import { createRoutesArray } from './api/api.js'
+import k from './api'
 
 const BASE_URL = 'https://kronika--puszcza.netlify.com'
 
@@ -41,7 +41,7 @@ export default {
     ]
   },
   generate: {
-    routes: createRoutesArray()
+    routes: k.getPosts().map(post => post.route)
   },
   /*
    ** Customize the progress-bar color

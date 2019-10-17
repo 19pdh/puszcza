@@ -2,5 +2,5 @@
 
 mkdir ./dist/api
 
-node ./scripts/generateApi.js
+node -r esm ./scripts/generateApi.js
 

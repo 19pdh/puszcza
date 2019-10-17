@@ -8,14 +8,21 @@
     <button @click="toggleMenu" class="menu-toggler">Menu</button>
     <ul :class="linksClass" @click="toggleMenu">
       <!-- Loop for generating links -->
-      <NavLink v-for="route in routes" :key="route.path" :link="route.path" :name="route.name"></NavLink>
+      <NavLink v-for="route in routes" :key="route.path" :link="route.path" :name="route.name" />
+      <NavLink
+        v-for="route in staticRoutes"
+        :key="route.path"
+        :link="route.path"
+        :name="route.name"
+        static
+      />
       <NavLink
         v-for="route in externalRoutes"
         :key="route.path"
         :link="route.path"
         :name="route.name"
-        :external="true"
-      ></NavLink>
+        external
+      />
     </ul>
   </nav>
 </template>
@@ -30,6 +37,7 @@ export default {
   props: {
     routes: Array,
     externalRoutes: Array,
+    staticRoutes: Array,
     title: String,
     logo: String
   },

@@ -1,6 +1,7 @@
 <template>
   <li class="navlink">
     <a v-if="external" class="link" target="_blank" rel="”noopener”" :href="link">{{ name }}</a>
+    <a v-else-if="static" class="link" :href="link">{{ name }}</a>
     <nuxt-link v-else class="link" :to="link">{{ name }}</nuxt-link>
   </li>
 </template>
@@ -10,7 +11,8 @@ export default {
   props: {
     link: String,
     name: String,
-    external: { type: Boolean, default: false }
+    external: { type: Boolean, default: false },
+    static: { type: Boolean, default: false }
   }
 }
 </script>

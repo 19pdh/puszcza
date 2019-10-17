@@ -161,7 +161,7 @@ export default {
     display: flex !important;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
 
     margin-bottom: 0;
     padding: 50px 10px;

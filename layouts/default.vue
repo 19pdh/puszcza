@@ -21,10 +21,10 @@ export default {
   data() {
     return {
       routes: [
-        { path: '/', name: 'Home' },
-        { path: '/o-nas', name: 'O nas' },
+        { path: '/', name: 'Strona główna' },
         { path: '/download', name: 'Do pobrania' },
-        { path: '/kontakt', name: 'Kontakt' }
+        { path: '/kontakt', name: 'Kontakt' },
+        { path: '/kronika', name: 'Kronika' }
       ],
       externalRoutes: [
         // {

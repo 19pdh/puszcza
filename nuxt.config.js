@@ -1,6 +1,6 @@
 import k from './api'
 
-const BASE_URL = 'https://kronika--puszcza.netlify.com'
+const BASE_URL = process.env.DEPLOY_URL || 'http://localhost:3000'
 
 export default {
   mode: 'universal',

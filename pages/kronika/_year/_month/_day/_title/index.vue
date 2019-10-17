@@ -40,13 +40,13 @@ export default {
 
 <style>
 .article {
-  padding: 20px 80px 20px 80px;
+  padding: 60px 80px;
   width: 100%;
   max-width: 1000px;
   flex: 1;
   background: #ffffff;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
   z-index: -1;
+  text-align: left;
 }
 .article img {
   width: 100%;
@@ -54,7 +54,10 @@ export default {
 }
 @media (max-width: 720px) {
   .article {
-    padding: 20px 40px 20px 40px;
+    padding: 60px 20px;
+  }
+  .article p {
+    text-align: justify;
   }
 }
 </style>

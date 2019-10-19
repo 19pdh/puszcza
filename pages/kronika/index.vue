@@ -17,8 +17,6 @@
 import ChroniclePost from '~/components/ChroniclePost'
 import k from '~/api'
 
-const URL = process.env.DEPLOY_URL || 'http://localhost:8080'
-
 export default {
   components: {
     ChroniclePost
@@ -34,9 +32,7 @@ export default {
   methods: {
     getPosts() {
       if (this.posts.length < 1) {
-        this.$axios
-          .get(`${URL}/api/posts.json`)
-          .then(r => (this.posts = r.data))
+        this.$axios.get(`/api/posts.json`).then(r => (this.posts = r.data))
       }
       console.log(this.posts)
     }

@@ -32,7 +32,9 @@ export default {
   methods: {
     getPosts() {
       if (this.posts.length < 1) {
-        this.$axios.get(`/api/posts.json`).then(r => (this.posts = r.data))
+        this.$axios
+          .get(`${process.env.baseUrl}/api/posts.json`)
+          .then(r => (this.posts = r.data))
       }
       console.log(this.posts)
     }

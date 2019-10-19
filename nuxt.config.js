@@ -40,6 +40,9 @@ export default {
       }
     ]
   },
+  env: {
+    baseUrl: process.env.DEPLOY_URL || 'http://localhost:3000'
+  },
   generate: {
     routes: k.getPosts().map(post => post.route)
   },

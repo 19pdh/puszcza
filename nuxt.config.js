@@ -1,6 +1,6 @@
 import k from './api'
 
-const BASE_URL = process.env.DEPLOY_URL || 'http://localhost:3000'
+const BASE_URL = process.env.DEPLOY_PRIME_URL || 'http://localhost:3000'
 
 export default {
   mode: 'universal',

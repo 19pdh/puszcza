@@ -24,6 +24,7 @@ export default {
   font-family: 'Roboto Slab', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-weight: bold;
 
   text-decoration: none;
   color: #181818;
@@ -45,6 +46,12 @@ export default {
 
 .nuxt-link-exact-active {
   background-color: #ececec !important;
+}
+
+@media (min-width: 900px) {
+  .link {
+    font-weight: normal;
+  }
 }
 
 @media (max-width: 1300px) {

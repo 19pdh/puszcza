@@ -23,9 +23,10 @@ export default {
       routes: [
         { path: '/', name: 'Strona główna' },
         { path: '/download', name: 'Do pobrania' },
-        { path: '/kontakt', name: 'Kontakt' }
+        { path: '/kontakt', name: 'Kontakt' },
+        { path: '/kronika', name: 'Kronika' }
       ],
-      staticRoutes: [{ path: '/kronika', name: 'Kronika' }],
+      staticRoutes: [],
       externalRoutes: [
         // {
         //   path: 'https://kronika-puszcza.netlify.com',

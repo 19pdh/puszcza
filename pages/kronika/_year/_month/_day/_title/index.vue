@@ -7,7 +7,7 @@
     <div v-else class="article">
       <!-- <h1>{{ params.title }}</h1>
       <span>{{ `${params.year}-${params.month}-${params.day}` }}</span>-->
-      <div class="content" v-html="content"></div>
+      <article class="content" v-html="content"></article>
     </div>
   </div>
 </template>

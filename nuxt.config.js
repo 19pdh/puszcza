@@ -28,7 +28,7 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: `${BASE_URL}/assets/og/default.png`
+        content: `${BASE_URL}/assets/og/default.jpg`
       }
     ],
     link: [

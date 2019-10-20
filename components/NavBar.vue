@@ -14,7 +14,7 @@
         :key="route.path"
         :link="route.path"
         :name="route.name"
-        static
+        pure
       />
       <NavLink
         v-for="route in externalRoutes"

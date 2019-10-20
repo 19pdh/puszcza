@@ -5,8 +5,6 @@
       <p>Nie znaleziono wpisu</p>
     </div>
     <div v-else class="article">
-      <!-- <h1>{{ params.title }}</h1>
-      <span>{{ `${params.year}-${params.month}-${params.day}` }}</span>-->
       <article class="content" v-html="content"></article>
     </div>
   </div>

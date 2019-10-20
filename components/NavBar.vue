@@ -5,7 +5,12 @@
       <nuxt-link :class="titleClass" to="/">{{ title }}</nuxt-link>
     </div>
     <div class="space"></div>
-    <button @click="toggleMenu" class="menu-toggler">Menu</button>
+
+    <div @click="toggleMenu" class="menu-toggler">
+      <img class="ham-menu" :src="ham_menu" alt="Hamburger menu">
+    </div>
+
+    <!-- <button @click="toggleMenu" class="menu-toggler">Menu</button> -->
     <ul :class="linksClass" @click="toggleMenu">
       <!-- Loop for generating links -->
       <NavLink v-for="route in routes" :key="route.path" :link="route.path" :name="route.name"></NavLink>
@@ -31,7 +36,8 @@ export default {
     routes: Array,
     externalRoutes: Array,
     title: String,
-    logo: String
+    logo: String,
+    ham_menu: String
   },
   computed: {
     titleClass() {
@@ -156,6 +162,12 @@ export default {
   .menu-toggler {
     display: block;
   }
+
+  .ham-menu {
+    width: 40px;
+    height: 40%;
+  }
+
 
   .links.show {
     display: flex !important;

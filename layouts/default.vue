@@ -5,6 +5,7 @@
       :externalRoutes="externalRoutes"
       title="19 PDH Puszcza"
       logo="/assets/krajka-logo.svg"
+      ham_menu="/assets/ham-menu.svg"
     />
     <nuxt id="content" />
     <Footer :routes="routes" :specialRoutes="specialRoutes" />

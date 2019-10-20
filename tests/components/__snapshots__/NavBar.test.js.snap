@@ -34,7 +34,7 @@ exports[`NavBar match snapshot 1`] = `
       link="/"
       name="Home"
     />
-     
+      
   </ul>
 </nav>
 `;

@@ -1,13 +1,8 @@
 <template>
   <div id="app">
-    <NavBar
-      :routes="routes"
-      :staticRoutes="staticRoutes"
-      title="19 PDH Puszcza"
-      logo="/assets/krajka-logo.svg"
-    />
+    <NavBar :routes="routes" title="19 PDH Puszcza" logo="/assets/krajka-logo.svg" />
     <nuxt id="content" :key="$route.path" />
-    <Footer :routes="routes" :specialRoutes="specialRoutes" />
+    <Footer :routes="routes" />
   </div>
 </template>
 
@@ -25,20 +20,6 @@ export default {
         { path: '/download', name: 'Do pobrania' },
         { path: '/kontakt', name: 'Kontakt' },
         { path: '/kronika', name: 'Kronika' }
-      ],
-      staticRoutes: [],
-      externalRoutes: [
-        // {
-        //   path: 'https://kronika-puszcza.netlify.com',
-        //   name: 'Kronika'
-        // },
-        // { path: 'https://kronika-puszcza.netlify.com/galeria', name: 'Galeria' }
-      ],
-      specialRoutes: [
-        // {
-        //   name: 'Akcja "Ratujmy pszczoły"',
-        //   path: "/ratujmy-pszczoly"
-        // }
       ]
     }
   }

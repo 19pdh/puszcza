@@ -16,6 +16,27 @@ import frontmatter from 'front-matter'
 import k from '~/api'
 
 export default {
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.attributes.title
+        },
+        {
+          hid: 'og:type',
+          name: 'og:type',
+          content: 'article'
+        },
+        {
+          hid: 'og:article:author',
+          name: 'og:article:author',
+          content: this.attributes.author
+        }
+      ]
+    }
+  },
   async asyncData({ params }) {
     const { year, month, day, title } = params
     const post = k.getPost(year, month, day, title)

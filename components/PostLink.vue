@@ -40,6 +40,7 @@ export default {
   margin: 20px;
   flex-basis: 410px;
   max-width: 410px;
+  height: 250px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   background: #ffffff;
   text-align: left;

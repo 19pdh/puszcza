@@ -21,17 +21,17 @@ export default {
       meta: [
         {
           hid: 'og:title',
-          name: 'og:title',
+          property: 'og:title',
           content: this.attributes.title
         },
         {
           hid: 'og:type',
-          name: 'og:type',
+          property: 'og:type',
           content: 'article'
         },
         {
           hid: 'og:article:author',
-          name: 'og:article:author',
+          property: 'og:article:author',
           content: this.attributes.author
         }
       ]

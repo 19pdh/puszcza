@@ -2,17 +2,17 @@
   <div id="app">
     <NavBar :routes="routes" title="19 PDH Puszcza" logo="/assets/krajka-logo.svg" />
     <nuxt id="content" :key="$route.path" />
-    <Footer :routes="routes" />
+    <the-footer :routes="routes" />
   </div>
 </template>
 
 <script>
 import NavBar from '../components/NavBar.vue'
-import Footer from '../components/Footer.vue'
+import TheFooter from '../components/TheFooter.vue'
 
 export default {
   name: 'app',
-  components: { NavBar, Footer },
+  components: { NavBar, TheFooter },
   data() {
     return {
       routes: [

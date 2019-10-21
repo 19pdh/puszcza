@@ -25,6 +25,7 @@
 
 <script>
 export default {
+  name: 'TheFooter',
   props: {
     routes: Array,
     specialRoutes: Array,

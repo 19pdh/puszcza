@@ -17,12 +17,14 @@ storiesOf('PurePostList', module)
   .add('loading', () => {
     return {
       components: { PurePostList },
-      template: `<pure-post-list :posts="posts" loading/>`
+      template: `<pure-post-list :posts="posts" loading/>`,
+      data: () => ({ posts: [] })
     }
   })
   .add('no posts', () => {
     return {
       components: { PurePostList },
-      template: `<pure-post-list :posts="posts"/>`
+      template: `<pure-post-list :posts="posts"/>`,
+      data: () => ({ posts: [] })
     }
   })

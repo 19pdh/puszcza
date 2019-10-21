@@ -1,15 +1,17 @@
 <template>
-  <a :href="route" class="post">
-    <div>
-      <h4 class="post-title">{{title}}</h4>
-      <p class="post-description">{{shortenedDescription}}...</p>
-    </div>
-  </a>
+  <div class="post-link">
+    <a :href="route">
+      <div class="post-container">
+        <h4 class="post-title">{{title}}</h4>
+        <p class="post-description">{{shortenedDescription}}...</p>
+      </div>
+    </a>
+  </div>
 </template>
 
 <script>
 export default {
-  name: 'ChroniclePost',
+  name: 'PostLink',
   props: {
     title: {
       type: String,
@@ -34,26 +36,29 @@ export default {
 </script>
 
 <style scoped>
-.post {
+.post-link {
   margin: 20px;
   flex-basis: 410px;
-  text-decoration: none;
-}
-
-.post > div {
-  background: #ffffff;
+  max-width: 410px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-  padding: 20px;
-
+  background: #ffffff;
   text-align: left;
 }
 
-.post-title {
+.post-link > a {
+  text-decoration: none;
+}
+
+.post-link .post-container {
+  padding: 20px;
+}
+
+.post-link .post-title {
   color: #181818;
   font-size: 1.3em;
 }
 
-.post-description {
+.post-link .post-description {
   color: #484848;
   font-size: 0.9em;
 }

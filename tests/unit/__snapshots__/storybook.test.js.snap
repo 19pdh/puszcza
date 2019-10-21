@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots ChroniclePost default 1`] = `
+<div
+  class="post"
+>
+  <a
+    href="/kronika/2019/20/11/test"
+  >
+    <div
+      class="post-container"
+    >
+      <h4
+        class="post-title"
+      >
+        Test ChroniclePost
+      </h4>
+       
+      <p
+        class="post-description"
+      >
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar non ex non sagittis. Quisque in enim tellus. Aliquam consequat mi id sapien congue, sit amet vulputate tortor viverra. Donec....
+      </p>
+    </div>
+  </a>
+</div>
+`;

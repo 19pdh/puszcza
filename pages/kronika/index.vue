@@ -42,11 +42,3 @@ export default {
 }
 </script>
 
-<style scoped>
-.post-list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  max-width: 900px;
-}
-</style>

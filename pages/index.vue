@@ -11,7 +11,7 @@
 
 <script>
 import JoinUs from '~/components/JoinUs.vue'
-import FacebookFeed from '~/components/FacebookFeed.vue'
+import FacebookFeed from '~/components/Facebook/FacebookFeed.vue'
 import PostList from '~/components/PostList'
 
 export default {

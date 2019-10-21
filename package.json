@@ -11,7 +11,7 @@
     "postbuild": "./scripts/postbuild.sh",
     "start": "nuxt start",
     "test": "jest",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook -p 6006 -s static",
     "build-storybook": "build-storybook"
   },
   "dependencies": {

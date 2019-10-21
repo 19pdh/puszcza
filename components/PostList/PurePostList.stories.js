@@ -1,15 +1,12 @@
 import { storiesOf } from '@storybook/vue'
-import { center } from '../../.storybook/decorators'
 
 import { postLink } from '../PostLink.stories'
 
 import PurePostList from './PurePostList'
 
 export const posts = Array(5).fill(postLink)
-console.log(posts)
 
 storiesOf('PurePostList', module)
-  .addDecorator(center)
   .add('default', () => {
     return {
       components: { PurePostList },

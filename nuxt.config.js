@@ -1,3 +1,7 @@
+import k from './api'
+
+const BASE_URL = process.env.DEPLOY_PRIME_URL || 'http://localhost:3000'
+
 export default {
   mode: 'universal',
   /*
@@ -20,6 +24,11 @@ export default {
       {
         name: 'google-site-verification',
         content: 'V9-RG4-ertDzO9hqxuG29PkDUM8PGqaSOYUMiMaGUOY'
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: `${BASE_URL}/assets/og/default.jpg`
       }
     ],
     link: [
@@ -30,6 +39,12 @@ export default {
         rel: 'stylesheet'
       }
     ]
+  },
+  env: {
+    baseUrl: process.env.DEPLOY_URL || 'http://localhost:3000'
+  },
+  generate: {
+    routes: k.getPosts().map(post => post.route)
   },
   /*
    ** Customize the progress-bar color
@@ -67,6 +82,28 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, { isDev, isClient }) {
+      if (isClient) {
+        config.node = {
+          fs: 'empty',
+          child_process: 'empty',
+          tls: 'empty',
+          net: 'empty'
+        }
+      }
+      config.module.rules.push({
+        test: /\.md$/,
+        use: ['raw-loader']
+      })
+    }
+  },
+  hooks: {
+    generate: {
+      routeCreated({ route, path, errors }) {
+        console.log(route)
+        console.log(path)
+        console.log(errors)
+      }
+    }
   }
 }

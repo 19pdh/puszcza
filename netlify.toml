@@ -1,4 +1,9 @@
 [build]
 
 publish = "dist/"
-command = "npm run generate"
+command = "npm run build"
+
+[[redirects]]
+    from = "/api/posts"
+    to = "/api/posts.json"
+    status = 200

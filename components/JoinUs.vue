@@ -5,7 +5,7 @@
         <div class="text">Rozpocznij swoją harcerską przygodę!</div>
       </div>
       <div class="button">
-        <router-link to="/kontakt">Dołącz do nas!</router-link>
+        <nuxt-link to="/kontakt">Dołącz do nas!</nuxt-link>
       </div>
     </div>
   </section>
@@ -53,10 +53,11 @@
   background-color: #507b34;
   padding: 10px;
   max-width: 150px;
+  color: #ffffff;
+  text-align: center;
 }
 
 .button a {
-  color: #ffffff;
   text-decoration: none;
 }
 

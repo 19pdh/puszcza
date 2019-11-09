@@ -1,28 +1,14 @@
 <template>
-  <nav :class="navbarClass">
+  <nav class="navbar" :class="{'menu-open': isMenuCollapsed}">
     <div class="title">
       <img v-if="logo" class="logo" :src="logo" alt="ZHR" />
-      <nuxt-link :class="titleClass" to="/">{{ title }}</nuxt-link>
+      <nuxt-link class="title-name" :class="{margin: logo}" to="/">{{ title }}</nuxt-link>
     </div>
     <div class="space"></div>
     <button @click="toggleMenu" class="menu-toggler">Menu</button>
-    <ul :class="linksClass" @click="toggleMenu">
+    <ul class="links" :class="{show: this.isMenuCollapsed}" @click="toggleMenu">
       <!-- Loop for generating links -->
-      <NavLink v-for="route in routes" :key="route.path" :link="route.path" :name="route.name" />
-      <NavLink
-        v-for="route in staticRoutes"
-        :key="route.path"
-        :link="route.path"
-        :name="route.name"
-        pure
-      />
-      <NavLink
-        v-for="route in externalRoutes"
-        :key="route.path"
-        :link="route.path"
-        :name="route.name"
-        external
-      />
+      <nav-link v-for="route in routes" :key="route.path" :link="route.path" :name="route.name" />
     </ul>
   </nav>
 </template>
@@ -31,47 +17,33 @@
 import NavLink from './NavLink'
 
 export default {
+  name: 'TheHeader',
   components: {
     NavLink
   },
   props: {
-    routes: Array,
-    externalRoutes: Array,
-    staticRoutes: Array,
-    title: String,
-    logo: String
-  },
-  computed: {
-    titleClass() {
-      if (this.logo) {
-        return 'title-name margin'
-      }
-      return 'title-name'
+    routes: {
+      type: Array,
+      required: true
     },
-    navbarClass() {
-      if (this.menuCollapsed) {
-        return 'navbar'
-      }
-      return 'navbar menu-open'
+    title: {
+      type: String,
+      required: true
     },
-    linksClass() {
-      if (this.menuCollapsed) {
-        return 'links'
-      }
-      return 'links show'
+    logo: {
+      type: String,
+      required: false,
+      default: () => ''
     }
   },
   data: function() {
     return {
-      menuCollapsed: true
+      isMenuCollapsed: true
     }
   },
   methods: {
     toggleMenu() {
-      this.menuCollapsed = !this.menuCollapsed
-    },
-    linksClick() {
-      this.toggleMenu()
+      this.isMenuCollapsed = !this.isMenuCollapsed
     }
   }
 }

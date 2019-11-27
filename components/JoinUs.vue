@@ -4,12 +4,21 @@
       <div class="title">
         <div class="text">Rozpocznij swoją harcerską przygodę!</div>
       </div>
-      <div class="button">
-        <nuxt-link to="/kontakt">Dołącz do nas!</nuxt-link>
-      </div>
+      <plain-button @click="$router.push('/kontakt')" text="Dołącz do nas" />
     </div>
   </section>
 </template>
+
+<script>
+import PlainButton from './Buttons/PlainButton'
+
+export default {
+  name: 'JoinUs',
+  components: {
+    PlainButton
+  }
+}
+</script>
 
 <style scoped>
 .joinus {

@@ -3,16 +3,18 @@
     <div v-if="loading" class="post-list-container">
       <div class="loading-post" v-for="(_, index) in 4" :key="index"></div>
     </div>
-    <div v-else-if="posts" class="post-list-container">
-      <post-link
-        v-for="(post, index) in posts"
-        :key="index"
-        :route="post.route"
-        :title="post.title"
-        :description="post.description"
-      />
-    </div>
-    <div v-else class="no-posts">Brak wpisów</div>
+    <div v-else-if="!posts" class="no-posts">Brak wpisów</div>
+    <transition name="fade-in">
+      <div v-if="posts && !loading" class="post-list-container">
+        <post-link
+          v-for="(post, index) in posts"
+          :key="index"
+          :route="post.route"
+          :title="post.title"
+          :description="post.description"
+        />
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -72,5 +74,18 @@ export default {
 
 .no-posts {
   text-align: center;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.fade-in-enter-active {
+  animation: fade-in 0.3s reverse;
 }
 </style>

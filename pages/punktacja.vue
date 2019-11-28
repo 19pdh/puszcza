@@ -3,11 +3,13 @@
     <h1>Punktacja</h1>
     <ranking-list v-if="scores" :scores="scores" />
     <p v-else>Loading...</p>
+    <ranking-rules />
   </div>
 </template>
 
 <script>
 import RankingList from '~/components/Ranking/RankingList'
+import RankingRules from '~/components/Ranking/RankingRules'
 
 const FAUNA_KEY = 'fnADeP_U0uACC4Hruw9JvjexNsvB-V-QjI3wr8yH'
 const b64encodedSecret = Buffer.from(FAUNA_KEY + ':').toString('base64')
@@ -26,7 +28,8 @@ const FETCH_OPTIONS = {
 
 export default {
   components: {
-    RankingList
+    RankingList,
+    RankingRules
   },
   data() {
     return {

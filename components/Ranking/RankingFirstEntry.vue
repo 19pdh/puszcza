@@ -26,6 +26,7 @@ export default {
 .ranking-first-entry {
   list-style: none;
   padding: 10px 20px;
+  margin: 10px;
   width: 100%;
 
   display: grid;

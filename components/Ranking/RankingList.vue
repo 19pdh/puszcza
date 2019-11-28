@@ -51,6 +51,7 @@ export default {
   padding-inline-start: 0;
 
   width: 100%;
-  max-width: 200px;
+  max-width: 300px;
+  margin: 10px;
 }
 </style>

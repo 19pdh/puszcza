@@ -23,7 +23,7 @@ export default {
 
 <style scoped>
 .ranking-entry {
-  width: 100%;
+  min-width: 200px;
   list-style: none;
 
   margin: 5px;

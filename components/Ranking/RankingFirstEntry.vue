@@ -26,13 +26,14 @@ export default {
 .ranking-first-entry {
   list-style: none;
   padding: 10px 20px;
-  display: grid;
+  width: 100%;
 
-  width: 150%;
+  display: grid;
   grid-template-columns: 15% 60% 25%;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
 
   font-size: 26px;
+  font-weight: 600;
 }
 
 .crown {

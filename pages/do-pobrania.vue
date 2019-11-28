@@ -1,10 +1,33 @@
 <template>
   <div class="container">
     <h1>Do pobrania</h1>
-    <a class="link" href="/files/Karta_próby_na_sprawność.pdf">Karta próby na sprawność</a>
-    <a class="link" href="/files/Próba_Harcerza.pdf">Próba Harcerza</a>
+    <a
+      v-for="{ file, title } in files"
+      :key="file"
+      class="link"
+      :href="`/files/${file}`"
+    >
+      {{ title }}
+    </a>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      files: [
+        {
+          file: 'Karta_próby_na_sprawność.pdf',
+          title: 'Karta próby na sprawność'
+        },
+        { file: 'Próba_Harcerza.pdf', title: 'Próba Harcerza' },
+        { file: 'Książeczka_sprawności.pdf', title: 'Książeczka sprawności' }
+      ]
+    }
+  }
+}
+</script>
 
 <style scoped>
 .container {

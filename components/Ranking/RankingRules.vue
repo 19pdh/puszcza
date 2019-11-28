@@ -8,11 +8,13 @@
 <script>
 import rules from '~/assets/zasady-punktacji.md'
 
+const md = require('markdown-it')()
+
 export default {
   name: 'RankingRules',
   data() {
     return {
-      rules
+      rules: md.render(rules)
     }
   }
 }
@@ -26,6 +28,7 @@ export default {
 
 .rules th,
 .rules td {
+  padding: 5px 15px;
   border: 1px solid #000;
 }
 </style>

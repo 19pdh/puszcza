@@ -69,8 +69,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa',
-    '@nuxtjs/markdownit'
+    '@nuxtjs/pwa'
   ],
   /*
    ** Axios module configuration
@@ -80,11 +79,6 @@ export default {
   /*
    ** Build configuration
    */
-  markdownit: {
-    preset: 'default',
-    linkify: true,
-    breaks: true
-  },
   build: {
     /*
      ** You can extend webpack config here

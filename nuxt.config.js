@@ -9,7 +9,8 @@ export default {
    */
   head: {
     htmlAttrs: {
-      lang: 'pl'
+      lang: 'pl',
+      prefix: 'og: http://ogp.me/ns#'
     },
     title: '19 PDH Puszcza',
     meta: [

@@ -1,7 +1,11 @@
 <template>
   <div id="app">
-    <the-header :routes="routes" title="19 PDH Puszcza" logo="/assets/krajka-logo.svg" />
-    <nuxt id="content" :key="$route.path" />
+    <the-header
+      :routes="routes"
+      title="19 PDH Puszcza"
+      logo="/assets/krajka-logo.svg"
+    />
+    <nuxt id="content" />
     <the-footer :routes="routes" />
   </div>
 </template>
@@ -17,7 +21,7 @@ export default {
     return {
       routes: [
         { path: '/', name: 'Strona główna' },
-        { path: '/download', name: 'Do pobrania' },
+        { path: '/do-pobrania', name: 'Do pobrania' },
         { path: '/kontakt', name: 'Kontakt' },
         { path: '/kronika', name: 'Kronika' }
       ]

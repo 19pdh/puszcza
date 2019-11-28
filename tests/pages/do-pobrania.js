@@ -1,9 +1,9 @@
 import { shallowMount } from '@vue/test-utils'
-import download from '../../pages/download'
+import doPobrania from '../../pages/do-pobrania'
 
-describe('download', () => {
+describe('doPobrania', () => {
   // Now mount the component and you have the wrapper
-  const wrapper = shallowMount(download)
+  const wrapper = shallowMount(doPobrania)
 
   it('match snapshot', () => {
     expect(wrapper.element).toMatchSnapshot()

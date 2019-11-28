@@ -1,0 +1,13 @@
+type Troop {
+  name: String
+}
+
+type Points {
+  troop: Troop
+  points: Int
+}
+
+type Query {
+  getPoints: [Points!]
+  getTroopByName(name: String!): [Troop!]
+}

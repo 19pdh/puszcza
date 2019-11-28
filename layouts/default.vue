@@ -5,7 +5,7 @@
       title="19 PDH Puszcza"
       logo="/assets/krajka-logo.svg"
     />
-    <nuxt id="content" :key="$route.path" />
+    <nuxt id="content" />
     <Footer :routes="routes" />
   </div>
 </template>

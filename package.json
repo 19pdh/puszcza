@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
-    "@nuxtjs/markdownit": "^1.2.7",
     "@nuxtjs/pwa": "^3.0.0-0",
     "esm": "^3.2.25",
     "front-matter": "^3.0.2",

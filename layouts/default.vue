@@ -1,6 +1,10 @@
 <template>
   <div id="app">
-    <NavBar :routes="routes" title="19 PDH Puszcza" logo="/assets/krajka-logo.svg" />
+    <NavBar
+      :routes="routes"
+      title="19 PDH Puszcza"
+      logo="/assets/krajka-logo.svg"
+    />
     <nuxt id="content" :key="$route.path" />
     <Footer :routes="routes" />
   </div>
@@ -17,7 +21,7 @@ export default {
     return {
       routes: [
         { path: '/', name: 'Strona główna' },
-        { path: '/download', name: 'Do pobrania' },
+        { path: '/do-pobrania', name: 'Do pobrania' },
         { path: '/kontakt', name: 'Kontakt' },
         { path: '/kronika', name: 'Kronika' }
       ]

@@ -1,7 +1,7 @@
 <template>
   <div style="padding-top: 20px">
     <h2>Ostatnie wpisy</h2>
-    <div class="post-list">
+    <div v-if="posts" class="post-list">
       <chronicle-post
         v-for="(post, index) in posts"
         :key="index"
@@ -23,20 +23,20 @@ export default {
   },
   async asyncData() {
     return {
-      posts: k.getPosts()
+      posts: process.client ? undefined : k.getPosts()
     }
   },
   mounted() {
-    this.getPosts()
+    if (process.client && this.posts === undefined) {
+      this.getPosts().then(posts => (this.posts = posts))
+    }
   },
   methods: {
-    getPosts() {
-      if (this.posts.length < 1) {
-        this.$axios
-          .get(`${window.location.origin}/api/posts.json`)
-          .then(r => (this.posts = r.data))
-      }
-      console.log(this.posts)
+    async getPosts() {
+      const r = await this.$axios.get(
+        `${window.location.origin}/api/posts.json`
+      )
+      return r.data
     }
   }
 }

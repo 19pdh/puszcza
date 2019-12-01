@@ -1,8 +1,9 @@
 <template>
-  <pure-post-list :posts="posts" :loading="loading" />
+  <pure-post-list v-if="rawPosts" :posts="posts" :loading="loading" />
 </template>
 
 <script>
+import k from '~/api'
 import PurePostList from './PurePostList'
 
 export default {
@@ -14,6 +15,12 @@ export default {
       required: false
     }
   },
+  async asyncData() {
+    return {
+      loading: process.client,
+      rawPosts: process.client ? undefined : k.getPosts()
+    }
+  },
   data() {
     return {
       loading: true,
@@ -21,7 +28,9 @@ export default {
     }
   },
   mounted() {
-    this.loadPostsClient()
+    if (process.client && this.rawPosts === undefined) {
+      this.loadPostsClient()
+    }
   },
   computed: {
     posts() {

@@ -15,21 +15,18 @@ export default {
       required: false
     }
   },
-  async asyncData() {
-    return {
-      loading: process.client,
-      rawPosts: process.client ? undefined : k.getPosts()
-    }
-  },
   data() {
     return {
       loading: true,
-      rawPosts: []
+      rawPosts: undefined
     }
   },
   mounted() {
     if (process.client && this.rawPosts === undefined) {
       this.loadPostsClient()
+    } else {
+      this.rawPosts = k.getPosts()
+      this.loading = false
     }
   },
   computed: {

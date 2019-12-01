@@ -2,8 +2,8 @@
   <div class="post-link">
     <a :href="route">
       <div class="post-container">
-        <h4 class="post-title">{{title}}</h4>
-        <p class="post-description">{{shortenedDescription}}...</p>
+        <h4 class="post-title">{{ title }}</h4>
+        <p class="post-description">{{ shortenedDescription }}...</p>
       </div>
     </a>
   </div>
@@ -54,10 +54,12 @@ export default {
 
 .post-link > a {
   text-decoration: none;
+  height: 100%;
 }
 
 .post-link .post-container {
   padding: 20px;
+  height: 100%;
 }
 
 .post-link .post-title {

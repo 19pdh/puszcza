@@ -1,22 +1,33 @@
 <template>
-  <a href="https://facebook.com/19pdhpuszcza" target="_blank" rel="noopener">
-    <div class="button">
-      <img class="image" src="/assets/social/find_us_fb.png" alt="Find us on Facebook" />
+  <a
+    class="button"
+    href="https://facebook.com/19pdhpuszcza"
+    target="_blank"
+    rel="noopener"
+  >
+    <div class="button-container">
+      <img
+        class="image"
+        src="/assets/social/find_us_fb.png"
+        alt="Find us on Facebook"
+      />
     </div>
   </a>
 </template>
 
 <style scoped>
 .button {
-  border: 2px solid #c4c4c4;
-  border-radius: 4px;
-
-  padding: 15px 40px;
   margin: 10px;
 }
 
-.button:hover {
+.button:hover .button-container {
   background-color: #efefef;
+}
+
+.button-container {
+  border: 2px solid #c4c4c4;
+  border-radius: 4px;
+  padding: 15px 40px;
 }
 
 .image {

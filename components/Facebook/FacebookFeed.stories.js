@@ -3,7 +3,7 @@ import { center } from '../../.storybook/decorators'
 
 import FacebookFeed from './FacebookFeed'
 
-storiesOf('FacebookFeed', module)
+storiesOf('Facebook/FacebookFeed', module)
   .addDecorator(center)
   .add('default', () => {
     return {

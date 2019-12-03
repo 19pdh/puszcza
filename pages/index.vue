@@ -12,7 +12,7 @@
 <script>
 import JoinUs from '~/components/JoinUs.vue'
 import FacebookFeed from '~/components/Facebook/FacebookFeed.vue'
-import PostList from '~/components/PostList'
+import PostList from '~/components/Posts/PostList'
 
 export default {
   name: 'HomeView',

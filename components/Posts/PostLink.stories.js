@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue'
-import { center } from '../.storybook/decorators'
+import { center } from '../../.storybook/decorators'
 
 import PostLink from './PostLink'
 
@@ -10,7 +10,7 @@ export const postLink = {
   route: '/kronika/2019/20/11/test'
 }
 
-storiesOf('PostLink', module)
+storiesOf('Posts/PostLink', module)
   .addDecorator(center)
   .add('default', () => {
     return {

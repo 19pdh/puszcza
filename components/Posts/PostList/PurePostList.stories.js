@@ -6,7 +6,7 @@ import PurePostList from './PurePostList'
 
 export const posts = Array(5).fill(postLink)
 
-storiesOf('PurePostList', module)
+storiesOf('Posts/PurePostList', module)
   .add('default', () => {
     return {
       components: { PurePostList },

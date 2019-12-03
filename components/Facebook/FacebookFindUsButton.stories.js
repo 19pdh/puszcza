@@ -3,7 +3,7 @@ import { center } from '../../.storybook/decorators'
 
 import FacebookFindUsButton from './FacebookFindUsButton'
 
-storiesOf('FacebookFindUsButton', module)
+storiesOf('Facebook/FacebookFindUsButton', module)
   .addDecorator(center)
   .add('default', () => {
     return {

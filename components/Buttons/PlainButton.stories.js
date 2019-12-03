@@ -7,7 +7,7 @@ const plainButton = {
   text: 'Plain Button'
 }
 
-storiesOf('PlainButton', module)
+storiesOf('Buttons/PlainButton', module)
   .addDecorator(center)
   .add('default', () => {
     return {

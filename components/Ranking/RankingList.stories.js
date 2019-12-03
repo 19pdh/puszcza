@@ -6,7 +6,10 @@ import RankingList from './RankingList'
 import { rankingEntry } from './RankingEntry.stories'
 
 const rankingList = {
-  scores: Array(3).fill(rankingEntry)
+  scores: Array.from(Array(3).keys()).map(i => ({
+    ...rankingEntry,
+    troop: `Troop${i}`
+  }))
 }
 
 storiesOf('Ranking/RankingList', module)
@@ -15,6 +18,9 @@ storiesOf('Ranking/RankingList', module)
     return {
       components: { RankingList },
       template: `<ranking-list :scores="scores" />`,
-      data: () => rankingList
+      data: () => {
+        console.log(rankingList)
+        return rankingList
+      }
     }
   })

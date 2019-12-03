@@ -1,14 +1,21 @@
 <template>
-  <nav class="navbar" :class="{'menu-open': isMenuCollapsed}">
+  <nav class="navbar" :class="{ 'menu-open': showMenu }">
     <div class="title">
       <img v-if="logo" class="logo" :src="logo" alt="ZHR" />
-      <nuxt-link class="title-name" :class="{margin: logo}" to="/">{{ title }}</nuxt-link>
+      <nuxt-link class="title-name" :class="{ margin: logo }" to="/">{{
+        title
+      }}</nuxt-link>
     </div>
     <div class="space"></div>
     <button @click="toggleMenu" class="menu-toggler">Menu</button>
-    <ul class="links" :class="{show: this.isMenuCollapsed}" @click="toggleMenu">
+    <ul class="links" :class="{ show: this.showMenu }" @click="toggleMenu">
       <!-- Loop for generating links -->
-      <nav-link v-for="route in routes" :key="route.path" :link="route.path" :name="route.name" />
+      <nav-link
+        v-for="route in routes"
+        :key="route.path"
+        :link="route.path"
+        :name="route.name"
+      />
     </ul>
   </nav>
 </template>
@@ -38,12 +45,12 @@ export default {
   },
   data: function() {
     return {
-      isMenuCollapsed: true
+      showMenu: false
     }
   },
   methods: {
     toggleMenu() {
-      this.isMenuCollapsed = !this.isMenuCollapsed
+      this.showMenu = !this.showMenu
     }
   }
 }

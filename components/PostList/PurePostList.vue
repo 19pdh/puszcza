@@ -49,7 +49,7 @@ export default {
 .post-list-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: initial;
+  justify-content: center;
 }
 
 @keyframes loading {

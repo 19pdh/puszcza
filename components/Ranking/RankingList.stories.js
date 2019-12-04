@@ -18,9 +18,6 @@ storiesOf('Ranking/RankingList', module)
     return {
       components: { RankingList },
       template: `<ranking-list :scores="scores" />`,
-      data: () => {
-        console.log(rankingList)
-        return rankingList
-      }
+      data: () => rankingList
     }
   })

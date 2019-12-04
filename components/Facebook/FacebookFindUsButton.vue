@@ -32,6 +32,8 @@
 
 .image {
   width: 200px;
+  display: block;
+  margin: auto;
 }
 
 @media (max-width: 500px) {

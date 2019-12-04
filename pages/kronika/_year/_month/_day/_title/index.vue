@@ -4,9 +4,9 @@
       <h1>404</h1>
       <p>Nie znaleziono wpisu</p>
     </div>
-    <div v-else class="article">
+    <section v-else class="article">
       <article class="content" v-html="content"></article>
-    </div>
+    </section>
   </div>
 </template>
 

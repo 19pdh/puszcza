@@ -5,7 +5,9 @@
       title="19 PDH Puszcza"
       logo="/assets/krajka-logo.svg"
     />
-    <nuxt id="content" />
+    <main class="content">
+      <nuxt class="content" />
+    </main>
     <the-footer :routes="routes" />
   </div>
 </template>
@@ -40,7 +42,7 @@ export default {
   min-height: 100vh;
 }
 
-#content {
+.content {
   flex: 1;
   width: 100%;
 

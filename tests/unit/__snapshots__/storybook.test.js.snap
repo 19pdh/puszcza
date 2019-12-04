@@ -375,7 +375,7 @@ exports[`Storyshots Ranking/RankingList default 1`] = `
       <div
         class="ranking-first-entry__troop"
       >
-        Test
+        Troop0
       </div>
        
       <div
@@ -391,7 +391,7 @@ exports[`Storyshots Ranking/RankingList default 1`] = `
       <div
         class="ranking-entry__troop"
       >
-        Test
+        Troop1
       </div>
        
       <div
@@ -406,7 +406,7 @@ exports[`Storyshots Ranking/RankingList default 1`] = `
       <div
         class="ranking-entry__troop"
       >
-        Test
+        Troop2
       </div>
        
       <div

@@ -27,4 +27,8 @@ export default {
   text-align: center;
   font: 16px 'Roboto Slab';
 }
+
+.button:hover {
+  background-color: #42642b;
+}
 </style>

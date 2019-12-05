@@ -71,12 +71,22 @@ export default {
   width: 100%;
   border-radius: 5px;
 }
+
+.article h1 {
+  font-size: 1.5em;
+  letter-spacing: 0;
+}
+
 @media (max-width: 720px) {
   .article {
     padding: 60px 20px;
   }
   .article p {
     text-align: justify;
+  }
+  .article h1 {
+    font-size: 1.7em;
+    font-weight: 700;
   }
 }
 </style>

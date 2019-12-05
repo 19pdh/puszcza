@@ -106,5 +106,9 @@ export default {
         console.log(errors)
       }
     }
+  },
+  loading: {
+    color: '#507b34',
+    height: '5px'
   }
 }

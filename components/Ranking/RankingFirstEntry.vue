@@ -44,6 +44,7 @@ export default {
 
 .ranking-first-entry__troop {
   grid-column: 2;
+  text-align: center;
 }
 
 .ranking-first-entry__points {

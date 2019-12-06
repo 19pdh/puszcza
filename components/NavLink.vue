@@ -9,10 +9,22 @@
 <script>
 export default {
   props: {
-    link: String,
-    name: String,
-    external: { type: Boolean, default: false },
-    pure: { type: Boolean, default: false }
+    link: {
+      type: String,
+      required: true
+    },
+    name: {
+      type: String,
+      required: true
+    },
+    external: {
+      type: Boolean,
+      default: false
+    },
+    pure: {
+      type: Boolean,
+      default: false
+    }
   }
 }
 </script>

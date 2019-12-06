@@ -1,0 +1,592 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Buttons/PlainButton default 1`] = `
+<div
+  style="height: 100vh; display: flex; align-items: center; justify-content: center;"
+>
+  <button
+    class="button"
+  >
+    Plain Button
+  </button>
+</div>
+`;
+
+exports[`Storyshots Facebook/FacebookFeed default 1`] = `
+<div
+  style="height: 100vh; display: flex; align-items: center; justify-content: center;"
+>
+  <section
+    class="feed"
+  >
+    <h1>
+      Zobacz co się dzieje!
+    </h1>
+     
+    <a
+      class="button"
+      href="https://facebook.com/19pdhpuszcza"
+      rel="noopener"
+      target="_blank"
+    >
+      <div
+        class="button-container"
+      >
+        <img
+          alt="Find us on Facebook"
+          class="image"
+          src="/assets/social/find_us_fb.png"
+        />
+      </div>
+    </a>
+  </section>
+</div>
+`;
+
+exports[`Storyshots Facebook/FacebookFindUsButton default 1`] = `
+<div
+  style="height: 100vh; display: flex; align-items: center; justify-content: center;"
+>
+  <a
+    class="button"
+    href="https://facebook.com/19pdhpuszcza"
+    rel="noopener"
+    target="_blank"
+  >
+    <div
+      class="button-container"
+    >
+      <img
+        alt="Find us on Facebook"
+        class="image"
+        src="/assets/social/find_us_fb.png"
+      />
+    </div>
+  </a>
+</div>
+`;
+
+exports[`Storyshots JoinUs default 1`] = `
+<div
+  style="height: 100vh; display: flex; align-items: center; justify-content: center;"
+>
+  <section
+    class="joinus"
+  >
+    <div
+      class="heading"
+    >
+      <div
+        class="title"
+      >
+        <div
+          class="text"
+        >
+          Rozpocznij swoją harcerską przygodę!
+        </div>
+      </div>
+       
+      <button
+        class="button"
+      >
+        Dołącz do nas
+      </button>
+    </div>
+  </section>
+</div>
+`;
+
+exports[`Storyshots NavLink default 1`] = `
+<div
+  style="height: 100vh; display: flex; align-items: center; justify-content: center;"
+>
+  <li
+    class="navlink"
+  >
+    <nuxt-link
+      class="link"
+      to="/test"
+    >
+      Test
+    </nuxt-link>
+  </li>
+</div>
+`;
+
+exports[`Storyshots Posts/PostLink default 1`] = `
+<div
+  style="height: 100vh; display: flex; align-items: center; justify-content: center;"
+>
+  <div
+    class="post-link"
+  >
+    <a
+      href="/kronika/2019/20/11/test"
+    >
+      <div
+        class="post-container"
+      >
+        <h4
+          class="post-title"
+        >
+          Test PostLink
+        </h4>
+         
+        <p
+          class="post-description"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar non ex non sagittis. Quisque in enim tellus. Aliquam consequat mi id sapien congue, sit amet vulputate tortor viverra. Donec....
+        </p>
+      </div>
+    </a>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Posts/PurePostList default 1`] = `
+<div
+  class="post-list"
+>
+  <!---->
+   
+  <div
+    class="post-list-container"
+  >
+    <div
+      class="post-link"
+    >
+      <a
+        href="/kronika/2019/20/11/test"
+      >
+        <div
+          class="post-container"
+        >
+          <h4
+            class="post-title"
+          >
+            Test PostLink
+          </h4>
+           
+          <p
+            class="post-description"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar non ex non sagittis. Quisque in enim tellus. Aliquam consequat mi id sapien congue, sit amet vulputate tortor viverra. Donec....
+          </p>
+        </div>
+      </a>
+    </div>
+    <div
+      class="post-link"
+    >
+      <a
+        href="/kronika/2019/20/11/test"
+      >
+        <div
+          class="post-container"
+        >
+          <h4
+            class="post-title"
+          >
+            Test PostLink
+          </h4>
+           
+          <p
+            class="post-description"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar non ex non sagittis. Quisque in enim tellus. Aliquam consequat mi id sapien congue, sit amet vulputate tortor viverra. Donec....
+          </p>
+        </div>
+      </a>
+    </div>
+    <div
+      class="post-link"
+    >
+      <a
+        href="/kronika/2019/20/11/test"
+      >
+        <div
+          class="post-container"
+        >
+          <h4
+            class="post-title"
+          >
+            Test PostLink
+          </h4>
+           
+          <p
+            class="post-description"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar non ex non sagittis. Quisque in enim tellus. Aliquam consequat mi id sapien congue, sit amet vulputate tortor viverra. Donec....
+          </p>
+        </div>
+      </a>
+    </div>
+    <div
+      class="post-link"
+    >
+      <a
+        href="/kronika/2019/20/11/test"
+      >
+        <div
+          class="post-container"
+        >
+          <h4
+            class="post-title"
+          >
+            Test PostLink
+          </h4>
+           
+          <p
+            class="post-description"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar non ex non sagittis. Quisque in enim tellus. Aliquam consequat mi id sapien congue, sit amet vulputate tortor viverra. Donec....
+          </p>
+        </div>
+      </a>
+    </div>
+    <div
+      class="post-link"
+    >
+      <a
+        href="/kronika/2019/20/11/test"
+      >
+        <div
+          class="post-container"
+        >
+          <h4
+            class="post-title"
+          >
+            Test PostLink
+          </h4>
+           
+          <p
+            class="post-description"
+          >
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar non ex non sagittis. Quisque in enim tellus. Aliquam consequat mi id sapien congue, sit amet vulputate tortor viverra. Donec....
+          </p>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Posts/PurePostList loading 1`] = `
+<div
+  class="post-list"
+>
+  <div
+    class="post-list-container"
+  >
+    <div
+      class="loading-post"
+    />
+    <div
+      class="loading-post"
+    />
+    <div
+      class="loading-post"
+    />
+    <div
+      class="loading-post"
+    />
+  </div>
+   
+  <!---->
+</div>
+`;
+
+exports[`Storyshots Posts/PurePostList no posts 1`] = `
+<div
+  class="post-list"
+>
+  <!---->
+   
+  <div
+    class="post-list-container"
+  />
+</div>
+`;
+
+exports[`Storyshots Ranking/RankingEntry default 1`] = `
+<div
+  style="height: 100vh; display: flex; align-items: center; justify-content: center;"
+>
+  <li
+    class="ranking-entry"
+  >
+    <div
+      class="ranking-entry__troop"
+    >
+      Test
+    </div>
+     
+    <div
+      class="ranking-entry__points"
+    >
+      32
+    </div>
+  </li>
+</div>
+`;
+
+exports[`Storyshots Ranking/RankingFirstEntry default 1`] = `
+<div
+  style="height: 100vh; display: flex; align-items: center; justify-content: center;"
+>
+  <li
+    class="ranking-first-entry"
+  >
+    <img
+      class="crown"
+      src="/assets/crown.svg"
+    />
+     
+    <div
+      class="ranking-first-entry__troop"
+    >
+      Test
+    </div>
+     
+    <div
+      class="ranking-first-entry__points"
+    >
+      32
+    </div>
+  </li>
+</div>
+`;
+
+exports[`Storyshots Ranking/RankingList default 1`] = `
+<div
+  style="height: 100vh; display: flex; align-items: center; justify-content: center;"
+>
+  <ol
+    class="ranking-list"
+  >
+    <li
+      class="ranking-first-entry"
+    >
+      <img
+        class="crown"
+        src="/assets/crown.svg"
+      />
+       
+      <div
+        class="ranking-first-entry__troop"
+      >
+        Troop0
+      </div>
+       
+      <div
+        class="ranking-first-entry__points"
+      >
+        32
+      </div>
+    </li>
+     
+    <li
+      class="ranking-entry"
+    >
+      <div
+        class="ranking-entry__troop"
+      >
+        Troop1
+      </div>
+       
+      <div
+        class="ranking-entry__points"
+      >
+        32
+      </div>
+    </li>
+    <li
+      class="ranking-entry"
+    >
+      <div
+        class="ranking-entry__troop"
+      >
+        Troop2
+      </div>
+       
+      <div
+        class="ranking-entry__points"
+      >
+        32
+      </div>
+    </li>
+  </ol>
+</div>
+`;
+
+exports[`Storyshots TheFooter default 1`] = `
+<div
+  style="display: flex; flex-direction: column; min-height: 100vh;"
+>
+  <div
+    style="flex: 1;"
+  />
+  <div
+    class="footer"
+    style="background-color: rgb(80, 123, 52);"
+  >
+    <div
+      class="map"
+    >
+      <div
+        class="routes"
+      >
+        <nuxt-link
+          to="/"
+        >
+          Strona główna
+        </nuxt-link>
+        <nuxt-link
+          to="/download"
+        >
+          Do pobrania
+        </nuxt-link>
+        <nuxt-link
+          to="/kontakt"
+        >
+          Kontakt
+        </nuxt-link>
+        <nuxt-link
+          to="/kronika"
+        >
+          Kronika
+        </nuxt-link>
+      </div>
+       
+      <div
+        class="routes"
+      />
+    </div>
+     
+    <div
+      class="space"
+    />
+     
+    <div
+      class="author"
+    >
+      <p>
+        19 Poznańska Drużyna Harcerzy Puszcza
+      </p>
+       
+      <div
+        class="social"
+      >
+        <a
+          href="https://github.com/19pdh/"
+          rel="”noopener”"
+          target="_blank"
+        >
+          <img
+            alt="Github"
+            class="icon"
+            src="/assets/social/github.png"
+          />
+        </a>
+         
+        <a
+          href="https://www.facebook.com/19pdhpuszcza/"
+          rel="”noopener”"
+          target="_blank"
+        >
+          <img
+            alt="Facebook"
+            class="icon"
+            src="/assets/social/facebook.png"
+          />
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots TheHeader default 1`] = `
+<div
+  style="display: flex; flex-direction: column; min-height: 100vh;"
+>
+  <nav
+    class="navbar"
+  >
+    <div
+      class="title"
+    >
+      <img
+        alt="ZHR"
+        class="logo"
+        src="/assets/krajka-logo.svg"
+      />
+       
+      <nuxt-link
+        class="title-name margin"
+        to="/"
+      >
+        19 PDH Puszcza
+      </nuxt-link>
+    </div>
+     
+    <div
+      class="space"
+    />
+     
+    <button
+      class="menu-toggler"
+    >
+      Menu
+    </button>
+     
+    <ul
+      class="links"
+    >
+      <li
+        class="navlink"
+      >
+        <nuxt-link
+          class="link"
+          to="/"
+        >
+          Strona główna
+        </nuxt-link>
+      </li>
+      <li
+        class="navlink"
+      >
+        <nuxt-link
+          class="link"
+          to="/download"
+        >
+          Do pobrania
+        </nuxt-link>
+      </li>
+      <li
+        class="navlink"
+      >
+        <nuxt-link
+          class="link"
+          to="/kontakt"
+        >
+          Kontakt
+        </nuxt-link>
+      </li>
+      <li
+        class="navlink"
+      >
+        <nuxt-link
+          class="link"
+          to="/kronika"
+        >
+          Kronika
+        </nuxt-link>
+      </li>
+    </ul>
+  </nav>
+  <div
+    style="flex: 1;"
+  />
+</div>
+`;

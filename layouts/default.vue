@@ -1,22 +1,24 @@
 <template>
   <div id="app">
-    <NavBar
+    <the-header
       :routes="routes"
       title="19 PDH Puszcza"
       logo="/assets/krajka-logo.svg"
     />
-    <nuxt id="content" />
-    <Footer :routes="routes" />
+    <main class="content">
+      <nuxt class="content" />
+    </main>
+    <the-footer :routes="routes" />
   </div>
 </template>
 
 <script>
-import NavBar from '../components/NavBar.vue'
-import Footer from '../components/Footer.vue'
+import TheHeader from '../components/TheHeader.vue'
+import TheFooter from '../components/TheFooter.vue'
 
 export default {
   name: 'app',
-  components: { NavBar, Footer },
+  components: { TheHeader, TheFooter },
   data() {
     return {
       routes: [
@@ -31,23 +33,7 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap');
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 #app {
-  font-family: 'Roboto Slab', serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #181818;
   text-align: center;
   align-items: center;
 
@@ -56,7 +42,7 @@ body {
   min-height: 100vh;
 }
 
-#content {
+.content {
   flex: 1;
   width: 100%;
 

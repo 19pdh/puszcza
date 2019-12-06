@@ -4,12 +4,21 @@
       <div class="title">
         <div class="text">Rozpocznij swoją harcerską przygodę!</div>
       </div>
-      <div class="button">
-        <router-link to="/kontakt">Dołącz do nas!</router-link>
-      </div>
+      <plain-button @click="$router.push('/kontakt')" text="Dołącz do nas" />
     </div>
   </section>
 </template>
+
+<script>
+import PlainButton from './Buttons/PlainButton'
+
+export default {
+  name: 'JoinUs',
+  components: {
+    PlainButton
+  }
+}
+</script>
 
 <style scoped>
 .joinus {
@@ -53,10 +62,11 @@
   background-color: #507b34;
   padding: 10px;
   max-width: 150px;
+  color: #ffffff;
+  text-align: center;
 }
 
 .button a {
-  color: #ffffff;
   text-decoration: none;
 }
 

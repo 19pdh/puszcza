@@ -54,7 +54,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['assets/css/main.css'],
   /*
    ** Plugins to load before mounting the App
    */
@@ -106,5 +106,9 @@ export default {
         console.log(errors)
       }
     }
+  },
+  loading: {
+    color: '#507b34',
+    height: '5px'
   }
 }

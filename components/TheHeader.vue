@@ -7,7 +7,11 @@
       }}</nuxt-link>
     </div>
     <div class="space"></div>
-    <button @click="toggleMenu" class="menu-toggler">Menu</button>
+    <tasty-burger-button
+      class="menu-toggler"
+      type="spring"
+      @toggle="toggleMenu"
+    />
     <ul class="links" :class="{ show: this.showMenu }" @click="toggleMenu">
       <!-- Loop for generating links -->
       <nav-link
@@ -21,11 +25,15 @@
 </template>
 
 <script>
+import { TastyBurgerButton } from 'vue-tasty-burgers'
+// import 'vue-tasty-burgers/dist/vue-tasty-burgers.css'
+
 import NavLink from './NavLink'
 
 export default {
   name: 'TheHeader',
   components: {
+    TastyBurgerButton,
     NavLink
   },
   props: {

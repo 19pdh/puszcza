@@ -2,9 +2,9 @@
   <nav class="navbar" :class="{ 'menu-open': showMenu }">
     <div class="title">
       <img v-if="logo" class="logo" :src="logo" alt="ZHR" />
-      <nuxt-link class="title-name" :class="{ margin: logo }" to="/">{{
-        title
-      }}</nuxt-link>
+      <nuxt-link class="title-name" :class="{ margin: logo }" to="/">
+        {{ title }}
+      </nuxt-link>
     </div>
     <div class="space"></div>
     <tasty-burger-button
@@ -26,7 +26,7 @@
 
 <script>
 import { TastyBurgerButton } from 'vue-tasty-burgers'
-// import 'vue-tasty-burgers/dist/vue-tasty-burgers.css'
+import 'vue-tasty-burgers/dist/vue-tasty-burgers.css'
 
 import NavLink from './NavLink'
 
@@ -177,6 +177,10 @@ export default {
 @media (max-width: 500px) {
   .navbar {
     padding: 0 10px 0 10px;
+  }
+
+  .menu-toggler {
+    margin-right: 20px;
   }
 
   .logo {

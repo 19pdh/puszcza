@@ -3,7 +3,7 @@
 | Gra                      | I: 20, II: 15, III: 10    |
 | Biwak                    | I: 50, II: 40, III: 30    |
 | Frekwencja               | 0-5                       |
-| Sprawność                | 5 (bonus: 10)             |
+| Sprawność                | 15 (bonus: 20)            |
 | Wędrówka / Biwak zastępu | 20-50                     |
 | Krótki wpis do kroniki   | 10                        |
 | Dłuższy wpis do kroniki  | 25                        |

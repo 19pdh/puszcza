@@ -26,7 +26,10 @@ export default {
 
   padding: 80px 20%;
 
-  background: #dddddd;
+  background-image: url('/assets/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
   display: flex;
   flex-direction: row;
@@ -35,7 +38,7 @@ export default {
 
 .heading {
   width: 900px;
-  padding: 100px 0;
+  padding: 50px 0 150px 0;
 
   display: flex;
   flex-direction: column;

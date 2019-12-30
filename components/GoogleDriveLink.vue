@@ -3,9 +3,11 @@
     <div class="image">
       <img src="/assets/google-drive.png" alt="Drive" />
     </div>
-    <p>
-      {{ text }}
-    </p>
+    <div class="text">
+      <p>
+        {{ text }}
+      </p>
+    </div>
     <a :href="link">
       <plain-button text="Przejdź" />
     </a>
@@ -37,24 +39,71 @@ export default {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
 
   padding: 20px;
+  margin: 10px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  min-width: 200px;
+  min-width: 400px;
+}
+
+.google-drive-link .text {
+  margin: 30px 0;
+}
+
+.google-drive-link button,
+.google-drive-link a {
+  width: 100%;
+  display: block;
+  margin: auto;
+  text-decoration: none;
+  max-width: 300px;
 }
 
 .google-drive-link img {
   display: block;
   margin: auto;
+  width: 40px;
 }
 
 .google-drive-link .image {
   background: #f3f3f3;
   border-radius: 50px;
-  padding: 20px;
-  margin: 20%;
+  padding: 15px;
+  margin: 0 20%;
+}
+
+@media (min-width: 480px) {
+  .google-drive-link {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .google-drive-link .text {
+    margin: 0 10px;
+    flex: 1;
+    text-align: left;
+  }
+
+  .google-drive-link .image {
+    margin: 0;
+    margin-right: 10px;
+    padding: 10px;
+  }
+
+  .google-drive-link img {
+    width: 30px;
+  }
+
+  .google-drive-link a,
+  .google-drive-link button {
+    margin-right: 0;
+  }
+
+  .google-drive-link a {
+    width: 20%;
+  }
 }
 </style>

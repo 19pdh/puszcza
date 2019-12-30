@@ -4,9 +4,7 @@
       <img src="/assets/google-drive.png" alt="Drive" />
     </div>
     <div class="text">
-      <p>
-        {{ text }}
-      </p>
+      <p v-html="text"></p>
     </div>
     <a :href="link">
       <plain-button text="Przejdź" />
@@ -45,8 +43,6 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  min-width: 400px;
 }
 
 .google-drive-link .text {
@@ -75,10 +71,9 @@ export default {
   margin: 0 20%;
 }
 
-@media (min-width: 480px) {
+@media (min-width: 530px) {
   .google-drive-link {
     flex-direction: row;
-    width: 100%;
   }
 
   .google-drive-link .text {
@@ -104,6 +99,12 @@ export default {
 
   .google-drive-link a {
     width: 20%;
+  }
+}
+
+@media (min-width: 960px) {
+  .google-drive-link {
+    width: 100%;
   }
 }
 </style>

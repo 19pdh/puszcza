@@ -41,7 +41,7 @@ export default {
     const { year, month, day, title } = params
     const response = await axios
       .get(
-        `${process.env.baseUrl}/api/posts/${year}/${month}/${day}/${title}.json`
+        `${window.location.origin}/api/posts/${year}/${month}/${day}/${title}.json`
       )
       .catch(err => ({ notFound: true }))
 

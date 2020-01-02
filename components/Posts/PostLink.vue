@@ -1,11 +1,11 @@
 <template>
   <div class="post-link">
-    <a :href="route">
+    <nuxt-link :to="route">
       <div class="post-container">
         <h4 class="post-title">{{ title }}</h4>
         <p class="post-description">{{ shortenedDescription }}...</p>
       </div>
-    </a>
+    </nuxt-link>
   </div>
 </template>
 

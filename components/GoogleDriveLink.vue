@@ -47,6 +47,7 @@ export default {
 
 .google-drive-link .text {
   margin: 30px 0;
+  font-size: 18px;
 }
 
 .google-drive-link button,
@@ -80,6 +81,7 @@ export default {
     margin: 0 10px;
     flex: 1;
     text-align: left;
+    font-size: 16px;
   }
 
   .google-drive-link .image {

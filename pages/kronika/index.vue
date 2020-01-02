@@ -5,7 +5,7 @@
     <google-drive-link
       text="Zobacz również e&#8209;książkę rozkazów"
       link="https://drive.google.com/drive/folders/1LWH4yYXpaa8kapBa2UAZTKnAAgXOHQYo?usp=sharing"
-      style="margin: 60px 10px"
+      style="margin: 60px 30px"
     />
   </div>
 </template>

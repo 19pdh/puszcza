@@ -26,7 +26,7 @@ export default {
 
   padding: 80px 20%;
 
-  background-image: url('/assets/bg.jpg');
+  background-image: url('/assets/bg.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

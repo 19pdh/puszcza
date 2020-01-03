@@ -66,6 +66,43 @@ exports[`Storyshots Facebook/FacebookFindUsButton default 1`] = `
 </div>
 `;
 
+exports[`Storyshots GoogleDriveLink default 1`] = `
+<div
+  style="height: 100vh; display: flex; align-items: center; justify-content: center;"
+>
+  <div
+    class="google-drive-link"
+  >
+    <div
+      class="image"
+    >
+      <img
+        alt="Drive"
+        src="/assets/google-drive.png"
+      />
+    </div>
+     
+    <div
+      class="text"
+    >
+      <p>
+        Test
+      </p>
+    </div>
+     
+    <a
+      href="https://drive.google.com/u/1"
+    >
+      <button
+        class="button"
+      >
+        Przejdź
+      </button>
+    </a>
+  </div>
+</div>
+`;
+
 exports[`Storyshots JoinUs default 1`] = `
 <div
   style="height: 100vh; display: flex; align-items: center; justify-content: center;"

@@ -44,7 +44,7 @@ export default {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   background: #ffffff;
   text-align: left;
-  transition: transform 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .post-link:hover {

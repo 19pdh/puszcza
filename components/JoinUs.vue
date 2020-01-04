@@ -21,12 +21,19 @@ export default {
 </script>
 
 <style scoped>
+.webp .joinus {
+  background-image: url('/assets/bg.webp');
+}
+
+.no-webp .joinus {
+  background-image: url('/assets/bg.jpg');
+}
+
 .joinus {
   width: 100%;
 
   padding: 80px 20%;
 
-  background-image: url('/assets/bg.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

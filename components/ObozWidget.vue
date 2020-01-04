@@ -13,13 +13,20 @@ export default {
 </script>
 
 <style scoped>
+.webp .oboz-widget {
+  background-image: url('/assets/oboz.webp');
+}
+
+.no-webp .oboz-widget {
+  background-image: url('/assets/oboz.jpg');
+}
+
 .oboz-widget {
   width: 100%;
 
   margin-top: 50px;
   padding: 80px 20%;
 
-  background-image: url('/assets/oboz.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

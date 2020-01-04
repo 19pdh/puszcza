@@ -20,20 +20,27 @@
         />
       </div>
     </div>
+    <h3 style="margin-top: 10vh">Tutaj niedługo znajdziesz relacje z obozu</h3>
+    <pure-post-list loading />
   </section>
 </template>
 
-<style scoped>
-.oboz {
-  margin-top: 40px;
+<script>
+import PurePostList from '~/components/Posts/PostList/PurePostList'
+export default {
+  components: {
+    PurePostList
+  }
 }
+</script>
 
+<style scoped>
 .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px 0;
+  margin: 15vmax 0;
 }
 
 h1 {

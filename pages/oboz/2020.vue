@@ -50,14 +50,14 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 15vmax 0 5vmax 0;
+  margin: 10vmax 0 5vmax 0;
 }
 
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   background: black;
   color: white;
-  padding: 0.5em 1em;
+  padding: 0.25em 0.75em;
   width: max-content;
 }
 

@@ -8,6 +8,9 @@
         <h3>7 PDH Watra</h3>
       </div>
     </div>
+    <div class="countdown">
+      Do obozu zostało: <span>{{ days }} dni</span>
+    </div>
     <div class="mapouter">
       <div class="gmap_canvas">
         <iframe
@@ -30,6 +33,13 @@ import PurePostList from '~/components/Posts/PostList/PurePostList'
 export default {
   components: {
     PurePostList
+  },
+  computed: {
+    days() {
+      let now = new Date(Date.now())
+      let oboz = new Date(2020, 7, 6)
+      return Math.round((oboz.getTime() - now.getTime()) / 86400000)
+    }
   }
 }
 </script>
@@ -40,7 +50,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 15vmax 0;
+  margin: 15vmax 0 5vmax 0;
 }
 
 h1 {
@@ -58,6 +68,17 @@ h1 {
 
 .troops h3 {
   margin: 10px;
+}
+
+.countdown {
+  background: #ffffff;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 50px 10px;
+}
+
+.countdown span {
+  font-weight: 600;
 }
 
 @media (max-width: 480px) {

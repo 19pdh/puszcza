@@ -24,7 +24,7 @@
       </div>
     </div>
     <h3 style="margin-top: 10vh">Tutaj niedługo znajdziesz relacje z obozu</h3>
-    <pure-post-list loading />
+    <pure-post-list loading :posts="[]" />
   </section>
 </template>
 
@@ -84,6 +84,10 @@ h1 {
 @media (max-width: 480px) {
   .troops {
     flex-direction: column;
+  }
+
+  h1 {
+    font-size: 2em;
   }
 }
 

@@ -6,7 +6,6 @@ import PurePostList from './PurePostList'
 
 const postLinkNoImage = { ...postLink }
 delete postLinkNoImage['image']
-console.log(postLinkNoImage)
 
 export const posts = [
   ...Array(3).fill(postLinkNoImage),

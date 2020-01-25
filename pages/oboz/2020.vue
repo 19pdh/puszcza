@@ -11,24 +11,76 @@
         <h3>7 PDH Watra</h3>
       </div>
     </div>
-    <day-countdown text="Do obozu zostało:" :end-date="new Date(2020, 6, 7)" />
+    <day-countdown
+      v-if="awaiting"
+      text="Do obozu zostało:"
+      :end-date="endDate"
+    />
+    <google-drive-link
+      v-else-if="photos"
+      text="Zobacz zdjęcia z obozu"
+      :link="photos"
+    />
     <camp-map
       src="https://maps.google.com/maps?q=Jezioro%20Spore&t=&z=13&ie=UTF8&iwloc=&output=embed"
     />
-    <h3 style="margin-top: 10vh">Tutaj niedługo znajdziesz relacje z obozu</h3>
-    <pure-post-list loading :posts="[]" style="margin-bottom: 30px" />
+    <div v-if="posts">
+      <h3 class="story" style="margin: 10vh 10vmin">
+        To się działo na obozie
+      </h3>
+      <pure-post-list :posts="posts" style="margin-bottom: 30px" />
+    </div>
+    <empty-camp-story v-else />
   </section>
 </template>
 
 <script>
+import axios from 'axios'
+
 import PurePostList from '~/components/Posts/PostList/PurePostList'
 import DayCountdown from '~/components/DayCountdown'
 import CampMap from '~/components/CampMap'
+import EmptyCampStory from '~/components/Posts/EmptyCampStory'
+import GoogleDriveLink from '~/components/GoogleDriveLink'
+
+import { parsePosts } from '~/components/Posts/PostList'
+
 export default {
   components: {
     PurePostList,
     DayCountdown,
     CampMap,
+    GoogleDriveLink,
+    EmptyCampStory,
+    PurePostList,
+  },
+  async asyncData() {
+    try {
+      let posts = await axios.get(
+        `https://puszcza.netlify.com/api/category/oboz2020.json`
+      )
+      console.log(posts)
+      return {
+        posts: parsePosts(posts.data),
+      }
+    } catch (err) {
+      console.log(err)
+    }
+  },
+  data() {
+    return {
+      posts: null,
+      endDate: new Date(2020, 6, 7),
+    }
+  },
+  computed: {
+    days() {
+      let now = new Date(Date.now())
+      return Math.round((this.endDate.getTime() - now.getTime()) / 86400000)
+    },
+    awaiting() {
+      return this.days > 0
+    },
   },
 }
 </script>
@@ -103,6 +155,38 @@ h1 {
 @media (min-width: 1210px) {
   .oboz::after {
     content: '';
+  }
+}
+
+.story::before,
+.story::after {
+  content: '';
+  background-image: url('/assets/tomahawk.svg');
+  background-size: contain;
+  width: 70px;
+  height: 70px;
+  display: block;
+  top: 30px;
+  margin: auto;
+  margin-bottom: 20px;
+}
+
+.story::after {
+  display: none;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipX;
+  -ms-filter: 'FlipX';
+}
+
+@media (min-width: 510px) {
+  .story::before,
+  .story::after {
+    display: inline-block;
+    position: relative;
+    margin: 0 10px;
   }
 }
 </style>

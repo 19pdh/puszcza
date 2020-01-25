@@ -2,8 +2,8 @@
   <section class="oboz">
     <div class="header">
       <div class="logo">
-        <img src="/assets/2020.svg" alt="" />
-        <h1>Obóz 2020</h1>
+        <img style="z-index: 1" src="/assets/2020.svg" alt="" />
+        <h1 style="z-index: 9">Obóz 2020</h1>
       </div>
       <div class="troops">
         <h3>19 PDH Puszcza</h3>

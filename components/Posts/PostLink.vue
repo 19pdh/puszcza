@@ -86,5 +86,6 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.25);
 }
 </style>

@@ -6,6 +6,7 @@
     </div>
     <section v-else class="article">
       <img
+        v-if="attributes.image"
         :src="attributes.image"
         :alt="attributes.title"
         :title="attributes.title"
@@ -79,7 +80,8 @@ export default {
 }
 .article img {
   width: 100%;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
+  box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.25);
 }
 
 .article h1 {

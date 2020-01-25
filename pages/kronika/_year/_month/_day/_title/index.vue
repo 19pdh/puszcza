@@ -5,6 +5,11 @@
       <p>Nie znaleziono wpisu</p>
     </div>
     <section v-else class="article">
+      <img
+        :src="attributes.image"
+        :alt="attributes.title"
+        :title="attributes.title"
+      />
       <article class="content" v-html="content"></article>
     </section>
   </div>
@@ -22,19 +27,24 @@ export default {
         {
           hid: 'og:title',
           property: 'og:title',
-          content: this.attributes.title
+          content: this.attributes.title,
         },
         {
           hid: 'og:type',
           property: 'og:type',
-          content: 'article'
+          content: 'article',
         },
         {
           hid: 'og:article:author',
           property: 'og:article:author',
-          content: this.attributes.author
-        }
-      ]
+          content: this.attributes.author,
+        },
+        {
+          hid: 'og:image',
+          property: 'og:image',
+          content: this.attributes.image,
+        },
+      ],
     }
   },
   async asyncData({ params }) {
@@ -46,14 +56,14 @@ export default {
     return {
       params,
       attributes: post.content.meta,
-      content: post.content.html
+      content: post.content.html,
     }
   },
   data() {
     return {
-      notFound: false
+      notFound: false,
     }
-  }
+  },
 }
 </script>
 

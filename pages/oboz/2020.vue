@@ -1,7 +1,10 @@
 <template>
   <section class="oboz">
     <div class="header">
-      <h1>Obóz 2020</h1>
+      <div class="logo">
+        <img src="/assets/2020.svg" alt="" />
+        <h1>Obóz 2020</h1>
+      </div>
       <div class="troops">
         <h3>19 PDH Puszcza</h3>
         <h3>7 PDH Binduga</h3>
@@ -27,6 +30,7 @@
     </div>
     <h3 style="margin-top: 10vh">Tutaj niedługo znajdziesz relacje z obozu</h3>
     <pure-post-list loading :posts="[]" />
+    <span class="fether" />
   </section>
 </template>
 
@@ -40,13 +44,16 @@ export default {
     days() {
       let now = new Date(Date.now())
       let oboz = new Date(2020, 7, 6)
-      return Math.round((oboz.getTime() - now.getTime()) / 86400000)
+      return Math.round((oboz.getTime() - now.getTime()) / 86400000) - 30
     },
   },
 }
 </script>
 
 <style scoped>
+.oboz {
+  position: relative;
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -61,6 +68,7 @@ h1 {
   color: white;
   padding: 0.25em 0.75em;
   width: max-content;
+  margin-top: -4px;
 }
 
 .troops {
@@ -88,6 +96,10 @@ h1 {
     flex-direction: column;
   }
 
+  .logo img {
+    width: 100px;
+  }
+
   h1 {
     font-size: 2em;
   }
@@ -99,5 +111,34 @@ h1 {
   width: 100%;
   height: 50vh;
   max-height: 300px;
+}
+
+.oboz::after {
+  width: 100px;
+  height: 200px;
+  background: url('/assets/fether.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+}
+
+@media (min-width: 750px) {
+  .oboz::after {
+    content: '';
+  }
+}
+
+@media (min-width: 910px) {
+  .oboz::after {
+    content: none;
+  }
+}
+
+@media (min-width: 1210px) {
+  .oboz::after {
+    content: '';
+  }
 }
 </style>

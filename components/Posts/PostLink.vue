@@ -1,9 +1,12 @@
 <template>
   <div class="post-link">
     <a :href="route">
-      <div class="post-container">
-        <h4 class="post-title">{{ title }}</h4>
-        <p class="post-description">{{ shortenedDescription }}...</p>
+      <div>
+        <div class="image" :style="`background-image: url('${image}')`" />
+        <div class="post-container">
+          <h4 class="post-title">{{ title }}</h4>
+          <p class="post-description">{{ shortenedDescription }}...</p>
+        </div>
       </div>
     </a>
   </div>
@@ -15,23 +18,28 @@ export default {
   props: {
     title: {
       type: String,
-      required: true
+      required: true,
     },
     description: {
       type: String,
-      default: ''
+      default: '',
     },
     route: {
       type: String,
-      required: true
-    }
+      required: true,
+    },
+    image: {
+      type: String,
+      required: false,
+      default: () => '/assets/og/default.jpg',
+    },
   },
   computed: {
     shortenedDescription() {
       const first30Words = this.description.split(' ').slice(0, 30)
       return first30Words.join(' ')
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -60,6 +68,7 @@ export default {
 .post-link .post-container {
   padding: 20px;
   height: 100%;
+  padding-top: 0;
 }
 
 .post-link .post-title {
@@ -70,5 +79,13 @@ export default {
 .post-link .post-description {
   color: #484848;
   font-size: 0.9em;
+}
+
+.post-link .image {
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.25);
 }
 </style>

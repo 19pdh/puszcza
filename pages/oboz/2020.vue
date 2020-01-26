@@ -24,7 +24,7 @@
     <camp-map
       src="https://maps.google.com/maps?q=Jezioro%20Spore&t=&z=13&ie=UTF8&iwloc=&output=embed"
     />
-    <div v-if="posts">
+    <div v-if="posts" style="width: 100%">
       <h3 class="story" style="margin: 10vh 10vmin">
         To się działo na obozie
       </h3>

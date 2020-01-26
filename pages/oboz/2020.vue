@@ -54,6 +54,17 @@ export default {
     EmptyCampStory,
     PurePostList,
   },
+  head() {
+    return {
+      meta: [
+        {
+          hid: 'og:title',
+          property: 'og:title',
+          content: 'Obóz 2020',
+        },
+      ],
+    }
+  },
   async asyncData() {
     try {
       let posts = await axios.get(

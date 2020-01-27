@@ -484,7 +484,7 @@ exports[`Storyshots Posts/PurePostList loading 1`] = `
   class="post-list"
 >
   <div
-    class="post-list-container"
+    class="post-list-container loading"
   >
     <div
       class="loading-post"

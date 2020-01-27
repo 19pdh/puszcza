@@ -12,11 +12,12 @@ export const getPosts = async () => {
   }
 }
 
-export const parsePosts = posts =>
-  posts.map(post => ({
+export const parsePosts = (posts) =>
+  posts.map((post) => ({
     title: post.content.meta.title,
+    image: post.content.meta.image,
     description: post.content.description,
-    route: post.route
+    route: post.route,
   }))
 
 export default PostList

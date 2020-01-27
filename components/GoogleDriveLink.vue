@@ -6,7 +6,7 @@
     <div class="text">
       <p v-html="text"></p>
     </div>
-    <a :href="link">
+    <a :href="link" target="_blank" rel="noopener">
       <plain-button text="Przejdź" />
     </a>
   </div>
@@ -21,13 +21,13 @@ export default {
   props: {
     text: {
       type: String,
-      required: true
+      required: true,
     },
     link: {
       type: String,
-      required: true
-    }
-  }
+      required: true,
+    },
+  },
 }
 </script>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="post-list">
-    <div v-if="loading" class="post-list-container">
+    <div v-if="loading" class="post-list-container loading">
       <div class="loading-post" v-for="(_, index) in 4" :key="index"></div>
     </div>
     <div v-else-if="!posts" class="no-posts">Brak wpisów</div>
@@ -12,6 +12,7 @@
           :route="post.route"
           :title="post.title"
           :description="post.description"
+          :image="post.image"
         />
       </div>
     </transition>
@@ -27,14 +28,14 @@ export default {
   props: {
     posts: {
       type: Array,
-      required: true
+      required: true,
     },
     loading: {
       type: Boolean,
       required: false,
-      default: () => false
-    }
-  }
+      default: () => false,
+    },
+  },
 }
 </script>
 
@@ -50,6 +51,13 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+@media (max-width: 920px) {
+  .post-list-container.loading div:nth-child(1),
+  .post-list-container.loading div:nth-child(2) {
+    display: none;
+  }
 }
 
 @keyframes loading {

@@ -4,6 +4,9 @@ const BASE_URL = process.env.DEPLOY_PRIME_URL || 'http://localhost:3000'
 
 export default {
   mode: 'universal',
+  server: {
+    host: '0.0.0.0'
+  },
   /*
    ** Headers of the page
    */

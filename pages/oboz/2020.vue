@@ -143,7 +143,7 @@ h1 {
 .oboz::after {
   width: 100px;
   height: 200px;
-  background: url('/assets/fether.svg');
+  background: url('/assets/feather.svg');
   background-repeat: no-repeat;
   background-size: contain;
   position: absolute;

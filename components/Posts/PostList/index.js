@@ -4,20 +4,17 @@ import k from '~/api'
 import PostList from './PostList'
 
 export const getPosts = async () => {
-  if (process.client) {
-    let posts = await axios.get(`${window.location.origin}/api/posts.json`)
-    return parsePosts(posts.data)
-  } else {
-    return parsePosts(k.getPosts())
-  }
+  let posts = await axios.get(`https://puszcza.netlify.com/api/posts.json`)
+  return parsePosts(posts.data)
 }
 
 export const parsePosts = (posts) =>
   posts.map((post) => ({
-    title: post.content.meta.title,
-    image: post.content.meta.image,
-    description: post.content.description,
-    route: post.route,
+    title: post.title,
+    image: post.image,
+    description: post.description,
+    route: post.path,
+    meta: post.meta,
   }))
 
 export default PostList

@@ -12,7 +12,7 @@
           :route="post.route"
           :title="post.title"
           :description="post.description"
-          :image="post.image"
+          :image="post.meta.image"
         />
       </div>
     </transition>

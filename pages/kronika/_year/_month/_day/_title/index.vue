@@ -21,19 +21,19 @@ export default {
           {
             hid: 'og:title',
             property: 'og:title',
-            content: this.attributes.title
+            content: this.attributes.title,
           },
           {
             hid: 'og:type',
             property: 'og:type',
-            content: 'article'
+            content: 'article',
           },
           {
             hid: 'og:article:author',
             property: 'og:article:author',
-            content: this.attributes.author
-          }
-        ]
+            content: this.attributes.author,
+          },
+        ],
       }
     }
   },
@@ -41,9 +41,9 @@ export default {
     const { year, month, day, title } = params
     const response = await axios
       .get(
-        `${window.location.origin}/api/posts/${year}/${month}/${day}/${title}.json`
+        `https://puszcza.netlify.com/api/posts/${year}/${month}/${day}/${title}.json`
       )
-      .catch(err => ({ notFound: true }))
+      .catch((err) => ({ notFound: true }))
 
     const post = response.data
 
@@ -52,14 +52,14 @@ export default {
     return {
       params,
       attributes: post.meta,
-      content: post.content
+      content: post.content,
     }
   },
   data() {
     return {
-      notFound: false
+      notFound: false,
     }
-  }
+  },
 }
 </script>
 

@@ -26,33 +26,33 @@ import NavLink from './NavLink'
 export default {
   name: 'TheHeader',
   components: {
-    NavLink
+    NavLink,
   },
   props: {
     routes: {
       type: Array,
-      required: true
+      required: true,
     },
     title: {
       type: String,
-      required: true
+      required: true,
     },
     logo: {
       type: String,
       required: false,
-      default: () => ''
-    }
+      default: () => '',
+    },
   },
   data: function() {
     return {
-      showMenu: false
+      showMenu: false,
     }
   },
   methods: {
     toggleMenu() {
       this.showMenu = !this.showMenu
-    }
-  }
+    },
+  },
 }
 </script>
 
@@ -83,6 +83,7 @@ export default {
 }
 
 .title {
+  z-index: 99;
   font-size: 30px;
   flex-shrink: 0;
 
@@ -100,6 +101,7 @@ export default {
 }
 
 .links {
+  z-index: 98;
   display: flex;
   flex-direction: row;
   padding: 0;

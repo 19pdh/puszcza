@@ -12,6 +12,7 @@
           :route="post.route"
           :title="post.title"
           :description="post.description"
+          :image="post.image"
         />
       </div>
     </transition>
@@ -27,14 +28,14 @@ export default {
   props: {
     posts: {
       type: Array,
-      required: true
+      required: true,
     },
     loading: {
       type: Boolean,
       required: false,
-      default: () => false
-    }
-  }
+      default: () => false,
+    },
+  },
 }
 </script>
 

@@ -5,6 +5,12 @@
       <p>Nie znaleziono wpisu</p>
     </div>
     <section v-else class="article">
+      <img
+        v-if="attributes.image"
+        :src="attributes.image"
+        :alt="attributes.title"
+        :title="attributes.title"
+      />
       <article class="content" v-html="content"></article>
     </section>
   </div>
@@ -21,7 +27,7 @@ export default {
           {
             hid: 'og:title',
             property: 'og:title',
-            content: this.attributes.title,
+            content: this.title,
           },
           {
             hid: 'og:type',
@@ -31,7 +37,12 @@ export default {
           {
             hid: 'og:article:author',
             property: 'og:article:author',
-            content: this.attributes.author,
+            content: this.author,
+          },
+          {
+            hid: 'og:image',
+            property: 'og:image',
+            content: this.attributes.image,
           },
         ],
       }
@@ -51,6 +62,8 @@ export default {
 
     return {
       params,
+      title: post.title,
+      author: post.author,
       attributes: post.meta,
       content: post.content,
     }
@@ -75,7 +88,8 @@ export default {
 }
 .article img {
   width: 100%;
-  border-radius: 5px;
+  /*border-radius: 5px;*/
+  box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.25);
 }
 
 .article h1 {

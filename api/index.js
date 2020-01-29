@@ -1,4 +1,4 @@
-export const apiUrl = 'https://puszcza.netlify.com/api'
+export const apiUrl = 'https://feature-json-api--puszcza.netlify.com/api'
 
 export const parsePosts = (posts) =>
   posts.map((post) => ({

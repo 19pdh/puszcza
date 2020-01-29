@@ -19,9 +19,11 @@
 <script>
 import axios from 'axios'
 
+import { apiUrl } from '~/api'
+
 export default {
   head() {
-    if (this.attributes) {
+    if (!this.notFound) {
       return {
         meta: [
           {
@@ -51,9 +53,7 @@ export default {
   async asyncData({ params }) {
     const { year, month, day, title } = params
     const response = await axios
-      .get(
-        `https://feature-json-api--puszcza.netlify.com/api/posts/${year}/${month}/${day}/${title}.json`
-      )
+      .get(`${apiUrl}/posts/${year}/${month}/${day}/${title}.json`)
       .catch((err) => ({ notFound: true }))
 
     const post = response.data

@@ -44,6 +44,7 @@ import EmptyCampStory from '~/components/Posts/EmptyCampStory'
 import GoogleDriveLink from '~/components/GoogleDriveLink'
 
 import { parsePosts } from '~/components/Posts/PostList'
+import { apiUrl } from '~/api'
 
 export default {
   components: {
@@ -67,9 +68,7 @@ export default {
   },
   async asyncData() {
     try {
-      let posts = await axios.get(
-        `https://puszcza.netlify.com/api/category/oboz2020.json`
-      )
+      let posts = await axios.get(`${apiUrl}/category/oboz2020.json`)
       console.log(posts)
       return {
         posts: parsePosts(posts.data),

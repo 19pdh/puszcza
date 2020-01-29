@@ -1,7 +1,10 @@
-import Kronikarz from 'kronikarz'
+export const apiUrl = 'https://puszcza.netlify.com/api'
 
-const POSTS_PATH = './content/wpisy'
-
-const k = new Kronikarz(POSTS_PATH)
-
-export default k
+export const parsePosts = (posts) =>
+  posts.map((post) => ({
+    title: post.title,
+    image: post.image,
+    description: post.description,
+    route: post.path,
+    meta: post.meta,
+  }))

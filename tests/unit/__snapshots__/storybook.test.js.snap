@@ -159,8 +159,8 @@ exports[`Storyshots Posts/PostLink default 1`] = `
   <div
     class="post-link"
   >
-    <a
-      href="/kronika/2019/20/11/test"
+    <nuxt-link
+      to="/kronika/2019/20/11/test"
     >
       <div>
         <div
@@ -184,7 +184,7 @@ exports[`Storyshots Posts/PostLink default 1`] = `
           </p>
         </div>
       </div>
-    </a>
+    </nuxt-link>
   </div>
 </div>
 `;
@@ -196,8 +196,8 @@ exports[`Storyshots Posts/PostLink with image 1`] = `
   <div
     class="post-link"
   >
-    <a
-      href="/kronika/2019/20/11/test"
+    <nuxt-link
+      to="/kronika/2019/20/11/test"
     >
       <div>
         <div
@@ -221,263 +221,12 @@ exports[`Storyshots Posts/PostLink with image 1`] = `
           </p>
         </div>
       </div>
-    </a>
+    </nuxt-link>
   </div>
 </div>
 `;
 
-exports[`Storyshots Posts/PurePostList default 1`] = `
-<div
-  class="post-list"
->
-  <!---->
-   
-  <div
-    class="post-list-container"
-  >
-    <div
-      class="post-link"
-    >
-      <a
-        href="/kronika/2019/20/11/test"
-      >
-        <div>
-          <div
-            class="image"
-            style="background-image: url(/assets/og/default.jpg);"
-          />
-           
-          <div
-            class="post-container"
-          >
-            <h4
-              class="post-title"
-            >
-              Test PostLink
-            </h4>
-             
-            <p
-              class="post-description"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar non ex non sagittis. Quisque in enim tellus. Aliquam consequat mi id sapien congue, sit amet vulputate tortor viverra. Donec....
-            </p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div
-      class="post-link"
-    >
-      <a
-        href="/kronika/2019/20/11/test"
-      >
-        <div>
-          <div
-            class="image"
-            style="background-image: url(/assets/og/default.jpg);"
-          />
-           
-          <div
-            class="post-container"
-          >
-            <h4
-              class="post-title"
-            >
-              Test PostLink
-            </h4>
-             
-            <p
-              class="post-description"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar non ex non sagittis. Quisque in enim tellus. Aliquam consequat mi id sapien congue, sit amet vulputate tortor viverra. Donec....
-            </p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div
-      class="post-link"
-    >
-      <a
-        href="/kronika/2019/20/11/test"
-      >
-        <div>
-          <div
-            class="image"
-            style="background-image: url(/assets/og/default.jpg);"
-          />
-           
-          <div
-            class="post-container"
-          >
-            <h4
-              class="post-title"
-            >
-              Test PostLink
-            </h4>
-             
-            <p
-              class="post-description"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar non ex non sagittis. Quisque in enim tellus. Aliquam consequat mi id sapien congue, sit amet vulputate tortor viverra. Donec....
-            </p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div
-      class="post-link"
-    >
-      <a
-        href="/kronika/2019/20/11/test"
-      >
-        <div>
-          <div
-            class="image"
-            style="background-image: url(https://images.unsplash.com/photo-1573145881456-0708c72340ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);"
-          />
-           
-          <div
-            class="post-container"
-          >
-            <h4
-              class="post-title"
-            >
-              Test PostLink
-            </h4>
-             
-            <p
-              class="post-description"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar non ex non sagittis. Quisque in enim tellus. Aliquam consequat mi id sapien congue, sit amet vulputate tortor viverra. Donec....
-            </p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div
-      class="post-link"
-    >
-      <a
-        href="/kronika/2019/20/11/test"
-      >
-        <div>
-          <div
-            class="image"
-            style="background-image: url(https://images.unsplash.com/photo-1573145881456-0708c72340ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);"
-          />
-           
-          <div
-            class="post-container"
-          >
-            <h4
-              class="post-title"
-            >
-              Test PostLink
-            </h4>
-             
-            <p
-              class="post-description"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar non ex non sagittis. Quisque in enim tellus. Aliquam consequat mi id sapien congue, sit amet vulputate tortor viverra. Donec....
-            </p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div
-      class="post-link"
-    >
-      <a
-        href="/kronika/2019/20/11/test"
-      >
-        <div>
-          <div
-            class="image"
-            style="background-image: url(https://images.unsplash.com/photo-1573145881456-0708c72340ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);"
-          />
-           
-          <div
-            class="post-container"
-          >
-            <h4
-              class="post-title"
-            >
-              Test PostLink
-            </h4>
-             
-            <p
-              class="post-description"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar non ex non sagittis. Quisque in enim tellus. Aliquam consequat mi id sapien congue, sit amet vulputate tortor viverra. Donec....
-            </p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div
-      class="post-link"
-    >
-      <a
-        href="/kronika/2019/20/11/test"
-      >
-        <div>
-          <div
-            class="image"
-            style="background-image: url(https://images.unsplash.com/photo-1573145881456-0708c72340ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);"
-          />
-           
-          <div
-            class="post-container"
-          >
-            <h4
-              class="post-title"
-            >
-              Test PostLink
-            </h4>
-             
-            <p
-              class="post-description"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar non ex non sagittis. Quisque in enim tellus. Aliquam consequat mi id sapien congue, sit amet vulputate tortor viverra. Donec....
-            </p>
-          </div>
-        </div>
-      </a>
-    </div>
-    <div
-      class="post-link"
-    >
-      <a
-        href="/kronika/2019/20/11/test"
-      >
-        <div>
-          <div
-            class="image"
-            style="background-image: url(https://images.unsplash.com/photo-1573145881456-0708c72340ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80);"
-          />
-           
-          <div
-            class="post-container"
-          >
-            <h4
-              class="post-title"
-            >
-              Test PostLink
-            </h4>
-             
-            <p
-              class="post-description"
-            >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus pulvinar non ex non sagittis. Quisque in enim tellus. Aliquam consequat mi id sapien congue, sit amet vulputate tortor viverra. Donec....
-            </p>
-          </div>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
-`;
+exports[`Storyshots Posts/PurePostList default 1`] = `<!---->`;
 
 exports[`Storyshots Posts/PurePostList loading 1`] = `
 <div

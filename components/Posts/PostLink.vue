@@ -1,6 +1,6 @@
 <template>
   <div class="post-link">
-    <nuxt-link :to="route">
+    <nuxt-link :to="route" no-prefetch>
       <div>
         <div class="image" :style="`background-image: url('${image}')`" />
         <div class="post-container">
@@ -31,7 +31,7 @@ export default {
     image: {
       type: String,
       required: false,
-      default: () => '/assets/og/default.jpg',
+      default: '/assets/og/default.jpg',
     },
   },
   computed: {

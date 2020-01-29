@@ -1,23 +1,11 @@
 import axios from 'axios'
 
-import k from '~/api'
+import { apiUrl, parsePosts } from '~/api'
 import PostList from './PostList'
 
 export const getPosts = async () => {
-  if (process.client) {
-    let posts = await axios.get(`${window.location.origin}/api/posts.json`)
-    return parsePosts(posts.data)
-  } else {
-    return parsePosts(k.getPosts())
-  }
+  let posts = await axios.get(`${apiUrl}/posts.json`)
+  return parsePosts(posts.data)
 }
-
-export const parsePosts = (posts) =>
-  posts.map((post) => ({
-    title: post.content.meta.title,
-    image: post.content.meta.image,
-    description: post.content.description,
-    route: post.route,
-  }))
 
 export default PostList

@@ -8,7 +8,6 @@
     "dev": "nuxt",
     "prebuild": "./scripts/prebuild.sh",
     "build": "nuxt generate",
-    "postbuild": "./scripts/postbuild.sh",
     "start": "nuxt start",
     "test": "jest",
     "storybook": "start-storybook -p 6006 -s static",

@@ -4,8 +4,8 @@ import { postLink } from '../PostLink.stories'
 
 import PurePostList from './PurePostList'
 
-const postLinkNoImage = { ...postLink }
-delete postLinkNoImage['image']
+const postLinkNoImage = JSON.parse(JSON.stringify(postLink))
+delete postLinkNoImage.meta['image']
 
 export const posts = [
   ...Array(3).fill(postLinkNoImage),

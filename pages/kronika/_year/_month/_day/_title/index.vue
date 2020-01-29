@@ -52,7 +52,7 @@ export default {
     const { year, month, day, title } = params
     const response = await axios
       .get(
-        `https://puszcza.netlify.com/api/posts/${year}/${month}/${day}/${title}.json`
+        `https://feature-json-api--puszcza.netlify.com/api/posts/${year}/${month}/${day}/${title}.json`
       )
       .catch((err) => ({ notFound: true }))
 

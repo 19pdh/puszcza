@@ -4,7 +4,9 @@ import k from '~/api'
 import PostList from './PostList'
 
 export const getPosts = async () => {
-  let posts = await axios.get(`https://puszcza.netlify.com/api/posts.json`)
+  let posts = await axios.get(
+    `https://feature-json-api--puszcza.netlify.com/api/posts.json`
+  )
   return parsePosts(posts.data)
 }
 

@@ -43,8 +43,7 @@ import CampMap from '~/components/CampMap'
 import EmptyCampStory from '~/components/Posts/EmptyCampStory'
 import GoogleDriveLink from '~/components/GoogleDriveLink'
 
-import { parsePosts } from '~/components/Posts/PostList'
-import { apiUrl } from '~/api'
+import { apiUrl, parsePosts } from '~/api'
 
 export default {
   components: {

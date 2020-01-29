@@ -23,7 +23,7 @@ import { apiUrl } from '~/api'
 
 export default {
   head() {
-    if (!this.notFound) {
+    if (!this.notFound && this.attributes) {
       return {
         meta: [
           {

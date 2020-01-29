@@ -17,47 +17,55 @@
 </template>
 
 <script>
-const md = require('markdown-it')()
-import frontmatter from 'front-matter'
-import k from '~/api'
+import axios from 'axios'
+
+import { apiUrl } from '~/api'
 
 export default {
   head() {
-    return {
-      meta: [
-        {
-          hid: 'og:title',
-          property: 'og:title',
-          content: this.attributes.title,
-        },
-        {
-          hid: 'og:type',
-          property: 'og:type',
-          content: 'article',
-        },
-        {
-          hid: 'og:article:author',
-          property: 'og:article:author',
-          content: this.attributes.author,
-        },
-        {
-          hid: 'og:image',
-          property: 'og:image',
-          content: this.attributes.image,
-        },
-      ],
+    if (!this.notFound && this.attributes) {
+      return {
+        meta: [
+          {
+            hid: 'og:title',
+            property: 'og:title',
+            content: this.title,
+          },
+          {
+            hid: 'og:type',
+            property: 'og:type',
+            content: 'article',
+          },
+          {
+            hid: 'og:article:author',
+            property: 'og:article:author',
+            content: this.author,
+          },
+          {
+            hid: 'og:image',
+            property: 'og:image',
+            content: this.attributes.image,
+          },
+        ],
+      }
     }
   },
   async asyncData({ params }) {
     const { year, month, day, title } = params
-    const post = k.getPost(year, month, day, title)
+    const response = await axios
+      .get(`${apiUrl}/posts/${year}/${month}/${day}/${title}.json`)
+      .catch((err) => ({ notFound: true }))
+
+    const post = response.data
 
     if (post === undefined) return { notFound: true }
 
     return {
       params,
-      attributes: post.content.meta,
-      content: post.content.html,
+      title: post.title,
+      author: post.author,
+      attributes: post.meta,
+      content: post.content,
     }
   },
   data() {

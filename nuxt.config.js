@@ -1,11 +1,11 @@
-import k from './api'
+import k from './api/kronikarz'
 
 const BASE_URL = process.env.DEPLOY_PRIME_URL || 'http://localhost:3000'
 
 export default {
   mode: 'universal',
   server: {
-    host: '0.0.0.0'
+    host: '0.0.0.0',
   },
   /*
    ** Headers of the page
@@ -13,7 +13,7 @@ export default {
   head: {
     htmlAttrs: {
       lang: 'pl',
-      prefix: 'og: http://ogp.me/ns#'
+      prefix: 'og: http://ogp.me/ns#',
     },
     title: '19 PDH Puszcza',
     meta: [
@@ -23,32 +23,32 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: process.env.npm_package_description || '',
       },
       {
         name: 'google-site-verification',
-        content: 'V9-RG4-ertDzO9hqxuG29PkDUM8PGqaSOYUMiMaGUOY'
+        content: 'V9-RG4-ertDzO9hqxuG29PkDUM8PGqaSOYUMiMaGUOY',
       },
       {
         hid: 'og:image',
         name: 'og:image',
-        content: `${BASE_URL}/assets/og/default.jpg`
-      }
+        content: `${BASE_URL}/assets/og/default.jpg`,
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         href:
           'https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap',
-        rel: 'stylesheet'
-      }
-    ]
+        rel: 'stylesheet',
+      },
+    ],
   },
   env: {
-    baseUrl: process.env.DEPLOY_URL || 'http://localhost:3000'
+    baseUrl: process.env.DEPLOY_URL || 'http://localhost:3000',
   },
   generate: {
-    routes: k.getPosts().map(post => post.route)
+    routes: k.getPosts().map((post) => post.route),
   },
   /*
    ** Customize the progress-bar color
@@ -72,7 +72,7 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
   ],
   /*
    ** Axios module configuration
@@ -92,14 +92,14 @@ export default {
           fs: 'empty',
           child_process: 'empty',
           tls: 'empty',
-          net: 'empty'
+          net: 'empty',
         }
       }
       config.module.rules.push({
         test: /\.md$/,
-        use: ['raw-loader']
+        use: ['raw-loader'],
       })
-    }
+    },
   },
   hooks: {
     generate: {
@@ -107,11 +107,11 @@ export default {
         console.log(route)
         console.log(path)
         console.log(errors)
-      }
-    }
+      },
+    },
   },
   loading: {
     color: '#507b34',
-    height: '5px'
-  }
+    height: '5px',
+  },
 }

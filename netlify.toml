@@ -8,3 +8,8 @@ command = "npm run build"
  to = "https://api-puszcza.netlify.com/api/:splat"
  status = 200
  force = true
+
+ from = "/admin/*"
+ to = "https://api-puszcza.netlify.com/admin/:splat"
+ status = 200
+ force = true

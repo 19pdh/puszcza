@@ -15,19 +15,24 @@
       <p>
         Ugotuj z tego co masz posiłek / deser dla całej rodziny. Nagraj film
         prezentujący twoją potrawę (mile widziane są opinie domowników 😉). Film
-        prześlij na adres patryk.niedzwiedzinski@zhr.pl.
+        prześlij na adres
+        <a href="mailto:patryk.niedzwiedzinski@zhr.pl"
+          >patryk.niedzwiedzinski@zhr.pl</a
+        >
+        do poniedziałku godz. 18:30.
       </p>
 
       <h3>Głosowanie</h3>
       <p>
         Wszystkie przesłane filmy pojawią się na tej stronie, a o godzinie 19:00
-        pojawi się tutaj możliwość głosowania. Głosować może każdy.
+        pojawi się tutaj możliwość głosowania. Głosować może każdy. Głosowanie
+        trwa do godziny 21:30.
       </p>
 
       <h3>Nagroda</h3>
       <p>
         Za każde przystąpienie jest 10 punktów do punktacji zastępów, a dla
-        zwycięzcy 30 punktów do punktacji zastępów + NIESPODZIANKA
+        zwycięzcy 30 punktów do punktacji zastępów + NIESPODZIANKA.
       </p>
     </section>
     <img id="knifes" src="/assets/konkurs-kulinarny/knifes.svg" />
@@ -37,12 +42,17 @@
 <script>
 export default {
   name: 'KonkursKulinarny',
+  head() {
+    return {
+      title: 'Konkurs Kulinarny - 19 PDH Puszcza',
+    }
+  },
 }
 </script>
 
 <style scoped>
 #konkurs {
-  padding: 50px 10px;
+  padding: 80px 10px;
 }
 
 h1 {

@@ -1,0 +1,62 @@
+<template>
+  <div id="konkurs">
+    <img src="/assets/konkurs-kulinarny/chef_hat.svg" />
+    <h1>Konkurs Kulinarny</h1>
+    <section>
+      <h2>Druhowie!</h2>
+
+      <p>
+        Z powodu wirusa wszyscy musimy siedzieć w swoich domach. Nie znaczy to
+        jednak że mamy siedzieć bezczynnie! Dlatego rusza “Konkurs Kulinarny” -
+        pierwszy z serii aktywności “wirusowych”. Zasady konkursu są
+        następujące:
+      </p>
+
+      <p>
+        Ugotuj z tego co masz posiłek / deser dla całej rodziny. Nagraj film
+        prezentujący twoją potrawę (mile widziane są opinie domowników 😉). Film
+        prześlij na adres patryk.niedzwiedzinski@zhr.pl.
+      </p>
+
+      <h3>Głosowanie</h3>
+      <p>
+        Wszystkie przesłane filmy pojawią się na tej stronie, a o godzinie 19:00
+        pojawi się tutaj możliwość głosowania. Głosować może każdy.
+      </p>
+
+      <h3>Nagroda</h3>
+      <p>
+        Za każde przystąpienie jest 10 punktów do punktacji zastępów, a dla
+        zwycięzcy 30 punktów do punktacji zastępów + NIESPODZIANKA
+      </p>
+    </section>
+    <img id="knifes" src="/assets/konkurs-kulinarny/knifes.svg" />
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'KonkursKulinarny',
+}
+</script>
+
+<style scoped>
+#konkurs {
+  padding: 50px 10px;
+}
+
+h1 {
+  letter-spacing: 0.175em;
+  text-transform: uppercase;
+}
+
+section {
+  max-width: 900px;
+  text-align: left;
+}
+
+#knifes {
+  margin: 50px 25px;
+  max-width: 35vw;
+}
+</style>

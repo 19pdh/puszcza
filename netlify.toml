@@ -12,5 +12,5 @@ command = "npm run build"
 [[redirects]]
  from = "/admin/*"
  to = "https://api-puszcza.netlify.com/admin/:splat"
- status = 200
+ status = 301
  force = true

@@ -2,6 +2,13 @@
   <div id="konkurs">
     <img src="/assets/konkurs-kulinarny/chef_hat.svg" />
     <h1>Konkurs Kulinarny</h1>
+    <div class="alert">
+      <h3>Uwaga!</h3>
+      <p>
+        W związku z małą liczbą przesłanych filmów konkurs został przedłużony do
+        jutra do 18:30. Powodzenia!
+      </p>
+    </div>
     <section>
       <h2>Druhowie!</h2>
 
@@ -19,14 +26,14 @@
         <a href="mailto:patryk.niedzwiedzinski@zhr.pl"
           >patryk.niedzwiedzinski@zhr.pl</a
         >
-        do poniedziałku godz. 18:30.
+        do <b>wtorku</b> godz. 18:30.
       </p>
 
       <h3>Głosowanie</h3>
       <p>
-        Wszystkie przesłane filmy pojawią się na tej stronie, a w poniedziałek o
-        godzinie 19:00 pojawi się tutaj możliwość głosowania. Głosować może
-        każdy. Głosowanie będzie trwać do godziny 21:30.
+        Wszystkie przesłane filmy pojawią się na tej stronie, a
+        <b>we wtorek</b> o godzinie 19:00 pojawi się tutaj możliwość głosowania.
+        Głosować może każdy. Głosowanie będzie trwać do godziny 21:30.
       </p>
 
       <h3>Nagroda</h3>
@@ -71,6 +78,12 @@ export default {
 </script>
 
 <style scoped>
+.alert {
+  background: #eeeeee;
+  padding: 20px;
+  margin: 40px 0;
+}
+
 #konkurs {
   padding: 80px 10px;
 }

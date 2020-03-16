@@ -36,6 +36,16 @@
       </p>
     </section>
     <img id="knifes" src="/assets/konkurs-kulinarny/knifes.svg" />
+    <section id="submissions">
+      <h2>Przesłane filmy</h2>
+      <div>
+        <div v-for="{ title, id } in submissions" :key="id" class="link">
+          <a :href="id">
+            {{ title }}
+          </a>
+        </div>
+      </div>
+    </section>
   </div>
 </template>
 
@@ -45,6 +55,16 @@ export default {
   head() {
     return {
       title: 'Konkurs Kulinarny - 19 PDH Puszcza',
+    }
+  },
+  data() {
+    return {
+      submissions: [
+        {
+          title: 'Tymoteusz Jóźwiak - Risotto',
+          id: 'https://we.tl/t-Osxf2TEjiX',
+        },
+      ],
     }
   },
 }
@@ -63,6 +83,22 @@ h1 {
 section {
   max-width: 900px;
   text-align: left;
+}
+
+#submissions {
+  text-align: center;
+}
+
+.link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin: 25px 0;
+}
+
+#submissions img {
+  max-width: 80%;
 }
 
 #knifes {

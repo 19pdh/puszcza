@@ -27,13 +27,13 @@
         <a href="mailto:patryk.niedzwiedzinski@zhr.pl"
           >patryk.niedzwiedzinski@zhr.pl</a
         >
-        do <b>wtorku</b> godz. 18:30.
+        do <b>środy</b> godz. 18:30.
       </p>
 
       <h3>Głosowanie</h3>
       <p>
         Wszystkie przesłane filmy pojawią się na tej stronie, a
-        <b>we wtorek</b> o godzinie 19:00 pojawi się tutaj możliwość głosowania.
+        <b>w środę</b> o godzinie 19:00 pojawi się tutaj możliwość głosowania.
         Głosować może każdy. Głosowanie będzie trwać do godziny 21:30.
       </p>
 

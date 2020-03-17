@@ -71,6 +71,10 @@ export default {
           title: 'Tymoteusz Jóźwiak - Risotto',
           id: 'https://we.tl/t-Osxf2TEjiX',
         },
+        {
+          title: 'Paweł Nowak - Ciasto czekoladowe z kaszy',
+          id: 'https://we.tl/t-Mw0BwkkDor',
+        },
       ],
     }
   },

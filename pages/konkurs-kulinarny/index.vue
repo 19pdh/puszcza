@@ -2,13 +2,11 @@
   <div id="konkurs">
     <img src="/assets/konkurs-kulinarny/chef_hat.svg" />
     <h1>Konkurs Kulinarny</h1>
-    <div class="alert">
-      <h3>Uwaga!</h3>
-      <p>
-        W związku z małą liczbą przesłanych filmów konkurs został przedłużony do
-        jutra do 18:30. Powodzenia!
-      </p>
-    </div>
+    <google-drive-link
+      text="Zagłosuj!"
+      link="https://forms.gle/CCqiSr7Gt3fNWsqo6"
+      style="max-width: 900px; margin: 60px 0"
+    />
     <section>
       <h2>Druhowie!</h2>
 
@@ -57,8 +55,11 @@
 </template>
 
 <script>
+import GoogleDriveLink from '~/components/GoogleDriveLink'
+
 export default {
   name: 'KonkursKulinarny',
+  components: { GoogleDriveLink },
   head() {
     return {
       title: 'Konkurs Kulinarny - 19 PDH Puszcza',
@@ -74,6 +75,10 @@ export default {
         {
           title: 'Paweł Nowak - Ciasto czekoladowe z kaszy',
           id: 'https://we.tl/t-Mw0BwkkDor',
+        },
+        {
+          title: 'Krzysztof Śmiechowski - Serce z jajka i parówki',
+          id: 'https://youtu.be/kO2UvFuKmPg',
         },
       ],
     }

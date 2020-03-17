@@ -2,11 +2,14 @@
   <div id="konkurs">
     <img src="/assets/konkurs-kulinarny/chef_hat.svg" />
     <h1>Konkurs Kulinarny</h1>
-    <google-drive-link
+    <!--<google-drive-link
       text="Zagłosuj!"
       link="https://forms.gle/CCqiSr7Gt3fNWsqo6"
       style="max-width: 900px; margin: 60px 0"
-    />
+    />-->
+    <div class="alert">
+      Z woli ludu konkurs został przedłużony do jutra
+    </div>
     <section>
       <h2>Druhowie!</h2>
 
@@ -24,13 +27,13 @@
         <a href="mailto:patryk.niedzwiedzinski@zhr.pl"
           >patryk.niedzwiedzinski@zhr.pl</a
         >
-        do <b>wtorku</b> godz. 18:30.
+        do <b>środy</b> godz. 18:30.
       </p>
 
       <h3>Głosowanie</h3>
       <p>
         Wszystkie przesłane filmy pojawią się na tej stronie, a
-        <b>we wtorek</b> o godzinie 19:00 pojawi się tutaj możliwość głosowania.
+        <b>w środę</b> o godzinie 19:00 pojawi się tutaj możliwość głosowania.
         Głosować może każdy. Głosowanie będzie trwać do godziny 21:30.
       </p>
 

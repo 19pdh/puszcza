@@ -80,6 +80,10 @@ export default {
           title: 'Krzysztof Śmiechowski - Serce z jajka i parówki',
           id: 'https://youtu.be/kO2UvFuKmPg',
         },
+        {
+          title: 'Tymon Litewka - Jajo w chlebie',
+          id: 'https://we.tl/t-aRzZloihvo',
+        },
       ],
     }
   },

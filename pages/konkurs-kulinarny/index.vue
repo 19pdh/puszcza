@@ -91,6 +91,10 @@ export default {
           title: 'Ryszard Sibilski - Obiad dla rodziny',
           id: 'https://we.tl/t-e2yD0KI87u',
         },
+        {
+          title: 'Józef Chmura - Obiad z kurczaka',
+          id: 'https://we.tl/t-HPOwQwGIJR',
+        },
       ],
     }
   },

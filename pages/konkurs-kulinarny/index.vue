@@ -95,6 +95,10 @@ export default {
           title: 'Józef Chmura - Obiad z kurczaka',
           id: 'https://we.tl/t-HPOwQwGIJR',
         },
+        {
+          title: 'Antek Wojtkowski - Jajecznica po harcersku',
+          id: 'https://we.tl/t-JxtquLPK5r',
+        },
       ],
     }
   },

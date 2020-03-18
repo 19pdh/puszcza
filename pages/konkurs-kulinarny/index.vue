@@ -5,7 +5,7 @@
     <google-drive-link
       text="Zagłosuj!"
       link="https://forms.gle/CCqiSr7Gt3fNWsqo6"
-      style="max-width: 900px; margin: 60px 0"
+      style="max-width: 900px; margin: 60px 0; width: 100%"
     />
     <section>
       <h2>Druhowie!</h2>

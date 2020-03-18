@@ -87,6 +87,10 @@ export default {
           title: 'Tymon Litewka - Jajo w chlebie',
           id: 'https://we.tl/t-aRzZloihvo',
         },
+        {
+          title: 'Ryszard Sibilski - Obiad dla rodziny',
+          id: 'https://we.tl/t-e2yD0KI87u',
+        },
       ],
     }
   },

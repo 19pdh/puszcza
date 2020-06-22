@@ -9,6 +9,7 @@
         <h3>19 PDH Puszcza</h3>
         <h3>7 PDH Binduga</h3>
         <h3>7 PDH Watra</h3>
+        <h3>1 PDH</h3>
       </div>
     </div>
     <day-countdown

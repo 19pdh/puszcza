@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div style="display: block">
     <div v-if="notFound">
       <h1>404</h1>
       <p>Nie znaleziono wpisu</p>
@@ -82,9 +82,9 @@ export default {
   width: 100%;
   max-width: 1000px;
   flex: 1;
-  background: #ffffff;
   z-index: -1;
   text-align: left;
+  margin: auto;
 }
 .article img {
   width: 100%;

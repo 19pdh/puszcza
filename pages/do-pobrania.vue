@@ -9,6 +9,9 @@
     >
       {{ title }}
     </a>
+    <a class="link" href="http://sprawnosci.zhr.pl/">
+      Książeczka sprawności 🆕
+    </a>
   </div>
 </template>
 
@@ -22,7 +25,7 @@ export default {
           title: 'Karta próby na sprawność'
         },
         { file: 'Próba_Harcerza.pdf', title: 'Próba Harcerza' },
-        { file: 'Książeczka_sprawności.pdf', title: 'Książeczka sprawności' }
+        { file: 'Książeczka_sprawności.pdf', title: 'Stara książeczka sprawności' }
       ]
     }
   }

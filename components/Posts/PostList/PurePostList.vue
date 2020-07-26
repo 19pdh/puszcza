@@ -44,7 +44,7 @@ export default {
   width: 100%;
   max-width: 900px;
   justify-content: center;
-  margin: 0 auto;
+  margin: 15px auto;
 }
 
 .post-list-container {

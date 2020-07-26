@@ -20,8 +20,7 @@ export default {
 .oboz-widget {
   width: 100%;
 
-  margin-top: 50px;
-  padding: 80px 20%;
+  padding: 160px 20%;
 
   background-image: url('/assets/oboz.jpg');
   background-size: cover;

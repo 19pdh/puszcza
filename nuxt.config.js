@@ -34,6 +34,16 @@ export default {
         property: 'og:image',
         content: `${BASE_URL}/assets/og/default.jpg`,
       },
+      {
+        hid: 'og:image:width',
+        property: 'og:image:width',
+        content: `1200`,
+      },
+      {
+        hid: 'og:image:height',
+        property: 'og:image:height',
+        content: `916`,
+      },
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },

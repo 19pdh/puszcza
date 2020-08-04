@@ -22,7 +22,7 @@ export default {
       { name: 'robots', content: 'all' },
       {
         hid: 'description',
-        name: 'description',
+        property: 'description',
         content: process.env.npm_package_description || '',
       },
       {
@@ -31,7 +31,7 @@ export default {
       },
       {
         hid: 'og:image',
-        name: 'og:image',
+        property: 'og:image',
         content: `${BASE_URL}/assets/og/default.jpg`,
       },
     ],

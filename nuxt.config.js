@@ -32,7 +32,7 @@ export default {
       {
         hid: 'og:image',
         property: 'og:image',
-        content: `${BASE_URL}/assets/og/default.jpg`,
+        content: `${BASE_URL}/assets/og/default_tree.jpg`,
       },
       {
         hid: 'og:image:width',

@@ -31,7 +31,7 @@ export default {
     image: {
       type: String,
       required: false,
-      default: '/assets/og/default.jpg',
+      default: '/assets/og/default-tree.jpg',
     },
   },
   computed: {

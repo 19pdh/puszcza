@@ -166,7 +166,7 @@ exports[`Storyshots Posts/PostLink default 1`] = `
       <div>
         <div
           class="image"
-          style="background-image: url(/assets/og/default.jpg);"
+          style="background-image: url(/assets/og/default-tree.jpg);"
         />
          
         <div
@@ -247,7 +247,7 @@ exports[`Storyshots Posts/PurePostList default 1`] = `
         <div>
           <div
             class="image"
-            style="background-image: url(/assets/og/default.jpg);"
+            style="background-image: url(/assets/og/default-tree.jpg);"
           />
            
           <div
@@ -278,7 +278,7 @@ exports[`Storyshots Posts/PurePostList default 1`] = `
         <div>
           <div
             class="image"
-            style="background-image: url(/assets/og/default.jpg);"
+            style="background-image: url(/assets/og/default-tree.jpg);"
           />
            
           <div
@@ -309,7 +309,7 @@ exports[`Storyshots Posts/PurePostList default 1`] = `
         <div>
           <div
             class="image"
-            style="background-image: url(/assets/og/default.jpg);"
+            style="background-image: url(/assets/og/default-tree.jpg);"
           />
            
           <div

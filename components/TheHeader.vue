@@ -2,9 +2,9 @@
   <nav class="navbar" :class="{ 'menu-open': showMenu }">
     <div class="title">
       <img v-if="logo" class="logo" :src="logo" alt="ZHR" />
-      <nuxt-link class="title-name" :class="{ margin: logo }" to="/">{{
-        title
-      }}</nuxt-link>
+      <nuxt-link class="title-name" :class="{ margin: logo }" to="/">
+        19 PDH <b>PUSZCZA</b>
+      </nuxt-link>
     </div>
     <div class="space"></div>
     <button @click="toggleMenu" class="menu-toggler">Menu</button>
@@ -31,10 +31,6 @@ export default {
   props: {
     routes: {
       type: Array,
-      required: true,
-    },
-    title: {
-      type: String,
       required: true,
     },
     logo: {

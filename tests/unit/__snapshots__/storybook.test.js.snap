@@ -730,6 +730,7 @@ exports[`Storyshots TheHeader default 1`] = `
 >
   <nav
     class="navbar"
+    title="19 PDH Puszcza"
   >
     <div
       class="title"
@@ -744,7 +745,11 @@ exports[`Storyshots TheHeader default 1`] = `
         class="title-name margin"
         to="/"
       >
-        19 PDH Puszcza
+        
+      19 PDH 
+        <b>
+          PUSZCZA
+        </b>
       </nuxt-link>
     </div>
      

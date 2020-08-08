@@ -2,7 +2,6 @@
   <div id="app">
     <the-header
       :routes="routes"
-      title="19 PDH Puszcza"
       logo="/assets/krajka-logo.svg"
     />
     <main class="content">

@@ -4,7 +4,7 @@
       <div class="title">
         <div class="text">Rozpocznij swoją harcerską przygodę!</div>
       </div>
-      <plain-button @click="$router.push('/kontakt')" text="Dołącz do nas" />
+      <plain-button @click="$router.push('/nabor')" text="Dołącz do nas" />
     </div>
   </section>
 </template>

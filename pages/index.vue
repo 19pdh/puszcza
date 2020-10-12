@@ -1,11 +1,11 @@
 <template>
   <div>
-    <oboz-widget />
+    <join-us />
     <div style="width: 100%; padding-top: 50px">
       <h1>Ostatnie wpisy z kroniki</h1>
       <post-list :posts="posts" :max="4" />
     </div>
-    <join-us />
+    <oboz-widget />
     <facebook-feed />
   </div>
 </template>

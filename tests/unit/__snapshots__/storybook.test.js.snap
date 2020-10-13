@@ -536,7 +536,7 @@ exports[`Storyshots Ranking/RankingEntry default 1`] = `
     <div
       class="ranking-entry__troop"
     >
-      Trzewikodzioby
+      Test
     </div>
      
     <div
@@ -563,7 +563,7 @@ exports[`Storyshots Ranking/RankingFirstEntry default 1`] = `
     <div
       class="ranking-first-entry__troop"
     >
-      Trzewikodzioby
+      Test
     </div>
      
     <div

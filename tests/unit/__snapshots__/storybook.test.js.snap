@@ -166,7 +166,7 @@ exports[`Storyshots Posts/PostLink default 1`] = `
       <div>
         <div
           class="image"
-          style="background-image: url(/assets/og/default-tree.jpg);"
+          style="background-image: url(/assets/og/default_tree.jpg);"
         />
          
         <div
@@ -247,7 +247,7 @@ exports[`Storyshots Posts/PurePostList default 1`] = `
         <div>
           <div
             class="image"
-            style="background-image: url(/assets/og/default-tree.jpg);"
+            style="background-image: url(/assets/og/default_tree.jpg);"
           />
            
           <div
@@ -278,7 +278,7 @@ exports[`Storyshots Posts/PurePostList default 1`] = `
         <div>
           <div
             class="image"
-            style="background-image: url(/assets/og/default-tree.jpg);"
+            style="background-image: url(/assets/og/default_tree.jpg);"
           />
            
           <div
@@ -309,7 +309,7 @@ exports[`Storyshots Posts/PurePostList default 1`] = `
         <div>
           <div
             class="image"
-            style="background-image: url(/assets/og/default-tree.jpg);"
+            style="background-image: url(/assets/og/default_tree.jpg);"
           />
            
           <div
@@ -536,7 +536,7 @@ exports[`Storyshots Ranking/RankingEntry default 1`] = `
     <div
       class="ranking-entry__troop"
     >
-      Test
+      Trzewikodzioby
     </div>
      
     <div
@@ -563,7 +563,7 @@ exports[`Storyshots Ranking/RankingFirstEntry default 1`] = `
     <div
       class="ranking-first-entry__troop"
     >
-      Test
+      Trzewikodzioby
     </div>
      
     <div

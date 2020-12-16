@@ -23,6 +23,6 @@ command = "npm run build"
 
 [[redirects]]
  from = "/net"
- to = "https://19pdh.github.io/puszczanet"
+ to = "https://19pdh.github.io/puszczanet/"
  status = 200
  force = true

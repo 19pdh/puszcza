@@ -20,3 +20,9 @@ command = "npm run build"
  to = "https://api-puszcza.netlify.com/rss.xml"
  status = 200
  force = true
+
+[[redirects]]
+ from = "/net"
+ to = "https://19pdh.github.io/puszczanet"
+ status = 200
+ force = true

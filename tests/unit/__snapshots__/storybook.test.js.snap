@@ -485,6 +485,12 @@ exports[`Storyshots Posts/PurePostList default 1`] = `
         </div>
       </nuxt-link>
     </div>
+     
+    <nuxt-link
+      to="?page=undefined"
+    >
+      <!---->
+    </nuxt-link>
   </div>
 </div>
 `;
@@ -522,7 +528,14 @@ exports[`Storyshots Posts/PurePostList no posts 1`] = `
    
   <div
     class="post-list-container"
-  />
+  >
+     
+    <nuxt-link
+      to="?page=undefined"
+    >
+      <!---->
+    </nuxt-link>
+  </div>
 </div>
 `;
 
@@ -536,7 +549,7 @@ exports[`Storyshots Ranking/RankingEntry default 1`] = `
     <div
       class="ranking-entry__troop"
     >
-      Test
+      Trzewikodzioby
     </div>
      
     <div
@@ -563,7 +576,7 @@ exports[`Storyshots Ranking/RankingFirstEntry default 1`] = `
     <div
       class="ranking-first-entry__troop"
     >
-      Test
+      Trzewikodzioby
     </div>
      
     <div

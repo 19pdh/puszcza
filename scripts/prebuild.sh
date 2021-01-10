@@ -1,7 +1,7 @@
 #!/bin/sh
 
 set -x
-set -eou pipefail
+set -eu pipefail
 
 if [ -d ./content ]; then
     cd content

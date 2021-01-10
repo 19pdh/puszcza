@@ -1,5 +1,5 @@
 <template>
-  <pure-post-list v-if="posts" :posts="parsedPosts" :loading="loading" />
+  <pure-post-list v-if="posts" :next="next" :posts="parsedPosts" :loading="loading" />
 </template>
 
 <script>
@@ -16,6 +16,10 @@ export default {
     },
     posts: {
       type: Array,
+      required: false
+    },
+    next: {
+      type: Number,
       required: false
     }
   },

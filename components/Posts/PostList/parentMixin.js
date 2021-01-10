@@ -1,9 +1,10 @@
 import { getPosts } from './index'
 
 export default {
-  async asyncData() {
-    return {
-      posts: await getPosts(),
-    }
+  async asyncData({ query }) {
+    let page = query.page || 1;
+    const data = await getPosts(page);
+    return data;
   },
+  watchQuery: true
 }

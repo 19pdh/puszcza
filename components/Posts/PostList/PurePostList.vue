@@ -14,6 +14,9 @@
           :description="post.description"
           :image="post.meta.image"
         />
+        <nuxt-link :to="`?page=${next}`" v-if="next">
+          <plain-button class="next-link" text="Wcześniejsze wpisy"/>
+        </nuxt-link>
       </div>
     </transition>
   </div>
@@ -21,14 +24,19 @@
 
 <script>
 import PostLink from '../PostLink'
+import PlainButton from '../../Buttons/PlainButton.vue';
 
 export default {
   name: 'PurePostList',
-  components: { PostLink },
+  components: { PostLink, PlainButton },
   props: {
     posts: {
       type: Array,
       required: true,
+    },
+    next: {
+      type: Number,
+      required: false,
     },
     loading: {
       type: Boolean,
@@ -82,6 +90,12 @@ export default {
 
 .no-posts {
   text-align: center;
+}
+
+.next-link {
+  margin: 2em 0;
+  padding: 1em;
+  max-width: 100%;
 }
 
 @keyframes fade-in {

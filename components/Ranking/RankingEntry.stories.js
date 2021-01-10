@@ -4,7 +4,7 @@ import { center } from '../../.storybook/decorators'
 import RankingEntry from './RankingEntry'
 
 export const rankingEntry = {
-  troop: 'Test',
+  troop: 'Trzewikodzioby',
   points: 32
 }
 

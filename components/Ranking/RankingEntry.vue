@@ -32,9 +32,9 @@ export default {
   border: 2px solid #efefef;
 
   display: grid;
-  grid-template-columns: 0% 75% 25%;
+  grid-template-columns: 0% 80% 20%;
 
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .ranking-entry div {

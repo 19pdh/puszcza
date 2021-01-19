@@ -11,7 +11,10 @@
         :alt="attributes.title"
         :title="attributes.title"
       />
-      <article class="content" v-html="content"></article>
+      <article class="content">
+        <h1 style="width:100%">{{title}}</h1>
+        <div v-html="content" />
+      </article>
     </section>
   </div>
 </template>
@@ -95,6 +98,10 @@ export default {
 .article h1 {
   font-size: 1.5em;
   letter-spacing: 0;
+}
+
+article.content {
+  margin-top: 3ex;
 }
 
 @media (max-width: 720px) {

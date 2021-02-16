@@ -18,6 +18,7 @@
       :end-date="endDate"
     />
     <google-drive-link
+      style="width: 80vw; max-width: 64ex; margin: 4ex 0"
       v-else-if="photos"
       text="Zobacz zdjęcia z obozu"
       :link="photos"
@@ -81,6 +82,7 @@ export default {
     return {
       posts: null,
       endDate: new Date(2020, 6, 7),
+      photos: "https://pics.niedzwiedzinski.cyou/oboz2020/",
     }
   },
   computed: {

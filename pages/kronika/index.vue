@@ -8,7 +8,7 @@
     <post-list :posts="posts" :next="next" :max="8" />
     <google-drive-link
       text="Zobacz również e&#8209;książkę rozkazów"
-      link="https://drive.google.com/drive/folders/1LWH4yYXpaa8kapBa2UAZTKnAAgXOHQYo?usp=sharing"
+      link="https://zhr.niedzwiedzinski.cyou/rozkazy/"
       style="margin: 60px 30px"
     />
   </div>
